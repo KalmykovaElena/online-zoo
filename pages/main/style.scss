@@ -1,0 +1,57 @@
+@import "../../styles/main_header";
+@import "../../styles/main_watch_animal_cover_panda";
+@import "../../styles/main-main-content";
+@import "../../styles/pickAndFeed";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  padding-top: 14px;
+  position: absolute;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.watchAnimal {
+  background-image: url("../../assets/Giant Panda.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 780px;
+}
+
+
+.button {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  text-transform: uppercase;
+  height: 54px;
+  width: 298px;
+  border-radius: 25px;
+  padding: 16px 1px 16px 5px;;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+
+  &:hover {
+    background: #E47209;
+  }
+
+  &:active {
+    background: #4B9200;
+  }
+}

@@ -1,0 +1,395 @@
+.header {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+}
+.header__logo {
+  width: 82px;
+  height: 52px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 19.01px;
+  line-height: 22.82px;
+  text-align: center;
+  position: relative;
+}
+.header__logo-bamboo {
+  position: absolute;
+  bottom: 5.5px;
+  left: 15.5px;
+  width: 7.03px;
+  height: 20.98px;
+}
+.header__navigation {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 22.4px;
+  margin-left: 63px;
+  display: flex;
+  align-items: center;
+  gap: 438px;
+}
+.header__navigation-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 472px;
+}
+.header__navigation-item a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.watchAnimal__content {
+  width: 1160px;
+  margin: 0 auto;
+  padding-top: 92px;
+}
+.watchAnimal__content-circle {
+  width: 465px;
+  height: 465px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 50%;
+  margin-left: 587px;
+  margin-bottom: 64px;
+  position: relative;
+}
+.watchAnimal__content-text {
+  font-size: 106px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  top: 74px;
+  left: 73px;
+}
+.watchAnimal__content-text span {
+  color: #FFEE2E;
+}
+.watchAnimal__content-button {
+  margin-left: 766px;
+}
+.watchAnimal__content-button div {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+}
+
+.mainContent {
+  width: 100%;
+  height: 1729px;
+  background: #FFFFFF;
+  color: #333B41;
+  position: relative;
+}
+.mainContent__backstage {
+  width: 1160px;
+  margin: 140px auto 180px;
+  height: 403px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 87px;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+.mainContent__backstage-text, .mainContent__backstage-text div {
+  width: 465px;
+}
+.mainContent__backstage-text h2 {
+  font-size: 48px;
+  line-height: 58px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.mainContent__backstage-description {
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  margin-bottom: 54px;
+}
+.mainContent__backstage-title {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  margin-bottom: 34px;
+}
+.mainContent__backstage-content {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+}
+.mainContent__backstage-flower {
+  position: absolute;
+  top: -128px;
+  right: 0;
+}
+.mainContent__slider {
+  display: grid;
+  grid-template-columns: 1fr 1158px 1fr;
+}
+.mainContent__slider:first-child {
+  margin: 396px 20px auto auto;
+}
+.mainContent__slider:last-child {
+  margin: 396px 20px auto;
+}
+.mainContent__pets {
+  width: 1160px;
+  margin: 0 auto 78px;
+  position: relative;
+}
+.mainContent__pets-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mainContent__pets-card {
+  width: 366px;
+  position: relative;
+}
+.mainContent__pets-photo {
+  position: relative;
+  border-radius: 5px;
+  transition: 1s;
+}
+.mainContent__pets-photo__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px 14px 16px;
+}
+.mainContent__pets-photo-mask {
+  position: absolute;
+  font-size: 24px;
+  height: 120px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 366px;
+  transition: all 0.7s ease-in-out;
+  text-align: center;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+.mainContent__pets-photo-mask-name {
+  text-transform: uppercase;
+}
+.mainContent__pets-photo:hover {
+  transform: scale(1.1);
+}
+.mainContent__pets-photo:hover + .mainContent__pets-photo-mask {
+  opacity: 1;
+  top: 226px;
+}
+.mainContent__pets-photo:hover ~ .mainContent__pets-photo__info {
+  display: none;
+  border: none;
+}
+.mainContent__pets-card {
+  border: 1px solid #fa6f32;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.mainContent__pets__info {
+  padding: 8px 12px 14px 16px;
+  height: 60px;
+  width: 366px;
+  margin: -3px auto 0;
+  border-bottom-radius: 5px;
+}
+.mainContent__pets__info-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000000;
+}
+.mainContent__pets__info-description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+}
+.mainContent__arrow div {
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  text-align: center;
+  cursor: pointer;
+}
+.mainContent__arrow div:active {
+  background: #4B9200;
+}
+.mainContent__arrow div img {
+  margin-top: 45%;
+}
+.mainContent-button {
+  margin: 0 auto;
+}
+.mainContent__firstFlower {
+  position: absolute;
+  height: 460px;
+  bottom: 0;
+}
+.mainContent__secondFlower {
+  height: 275px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.arrow {
+  cursor: pointer;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow:hover {
+  transform: scale(1.1);
+  background: #E47209;
+}
+
+.pickAndFeed {
+  width: 1600px;
+  margin: 0 auto;
+  height: 1004px;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%);
+  padding-top: 69px;
+}
+.pickAndFeed__wrapper {
+  height: 835px;
+  width: 1160px;
+  background-color: rgba(253, 253, 255, 0.5215686275);
+  margin: 0 auto 100px;
+  border-radius: 20px;
+  padding-top: 41px;
+}
+.pickAndFeed__wrapper-text {
+  color: #333B41;
+}
+.pickAndFeed__wrapper-text h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  color: #FE9013;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.pickAndFeed__wrapper-text div:nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+  margin-left: 34px;
+  margin-bottom: 40px;
+}
+.pickAndFeed__wrapper-text div:nth-child(3) {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-left: 34px;
+  margin-bottom: 10px;
+}
+.pickAndFeed__wrapper-text div:nth-child(4) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-left: 34px;
+  height: 42px;
+  width: 863px;
+}
+.pickAndFeed__wrapper-text div:nth-child(4) a {
+  color: #333B41;
+  line-height: 20.8px;
+  text-decoration-color: #FE9013;
+  text-underline-offset: 4px;
+}
+.pickAndFeed__wrapper-text h3 {
+  margin: 60px auto 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47px;
+  width: 209px;
+}
+.pickAndFeed__wrapper-images {
+  width: 764px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 168px 130px 168px 130px 168px;
+}
+.pickAndFeed__wrapper-images-row {
+  margin: 54px auto;
+}
+.pickAndFeed__wrapper-button {
+  display: block;
+  margin: 60px auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  padding-top: 14px;
+  position: absolute;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.watchAnimal {
+  background-image: url("../../assets/Giant Panda.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 780px;
+}
+
+.button {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  text-transform: uppercase;
+  height: 54px;
+  width: 298px;
+  border-radius: 25px;
+  padding: 16px 1px 16px 5px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+}
+.button:hover {
+  background: #E47209;
+}
+.button:active {
+  background: #4B9200;
+}
+
+/*# sourceMappingURL=style.css.map */

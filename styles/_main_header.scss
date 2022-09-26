@@ -1,0 +1,51 @@
+@import "../break-points";
+
+.header {
+  width: $large;
+  margin: 0 auto;
+  display: flex;
+
+  &__logo {
+    width: 82px;
+    height: 52px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 19.01px;
+    line-height: 22.82px;
+    text-align: center;
+    position: relative;
+
+    &-bamboo {
+      position: absolute;
+      bottom: 5.5px;
+      left: 15.5px;
+      width: 7.03px;
+      height: 20.98px;
+    }
+  }
+
+  &__navigation {
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 22.4px;
+    margin-left: 63px;
+    display: flex;
+    align-items: center;
+    gap: 438px;
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      width: 472px;
+    }
+
+    &-item a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+@import "../break-points";
+.mainContent {
+  width: 100%;
+  height: 1729px;
+  background: #FFFFFF;
+  color: #333B41;
+  position: relative;
+
+  &__backstage {
+    width: $large;
+    margin: 140px auto 180px;
+    height: 403px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 87px;
+    font-weight: 400;
+    letter-spacing: 0em;
+
+    &-text,
+    &-text div {
+      width: 465px;
+    }
+
+    &-text h2 {
+      font-size: 48px;
+      line-height: 58px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 21px;
+      text-align: left;
+      margin-bottom: 54px;
+    }
+
+    &-title {
+      font-size: 24px;
+      line-height: 29px;
+      text-align: left;
+      margin-bottom: 34px;
+    }
+
+    &-content {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+    }
+
+    &-flower {
+      position: absolute;
+      top: -128px;
+      right: 0;
+    }
+  }
+&__slider{
+  display: grid;
+  grid-template-columns: 1fr 1158px 1fr;
+  &:first-child{
+    margin:396px 20px auto auto;
+  }
+  &:last-child{
+    margin:396px 20px auto ;
+  }
+}
+
+  &__pets {
+    width: $large;
+    margin: 0 auto 78px;
+    position: relative;
+    &-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-card {
+      width: 366px;
+      position: relative;
+    }
+
+    &-photo {
+      position: relative;
+      border-radius: 5px;
+      transition: 1s;
+      &__info{
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 12px 14px 16px;
+      }
+      &-mask {
+        position: absolute;
+        font-size: 24px;
+        height: 120px;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 366px;
+        transition: all 0.7s ease-in-out;
+        text-align: center;
+        left: 0;
+        right: 0;
+        opacity: 0;
+
+        &-name {
+          text-transform: uppercase;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:hover + &-mask {
+        opacity: 1;
+        top: 226px
+      }
+
+      &:hover ~ &__info {
+        display: none;
+        border: none;
+      }
+    }
+
+    &-card {
+      border: 1px solid #fa6f32;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      padding: 8px 12px 14px 16px;
+      height: 60px;
+      width: 366px;
+      margin: -3px auto 0;
+      border-bottom-radius: 5px;
+
+      &-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #000000;
+      }
+
+      &-description {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 18px;
+        text-align: left;
+      }
+    }
+  }
+
+
+
+  &__arrow div {
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    text-align: center;
+    cursor: pointer;
+
+    &:active {
+      background: #4B9200;
+    }
+  }
+
+  &__arrow div img {
+    margin-top: 45%;
+  }
+  &-button{
+    margin: 0 auto;
+  }
+
+
+    &__firstFlower {
+      position:absolute;
+      height:460px;
+      bottom:0;
+    }
+    &__secondFlower {
+      height:275px;
+      position: absolute;
+      bottom:0;
+      right:0;
+    }
+
+}
+.arrow {
+  cursor: pointer;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    transform: scale(1.1);
+    background: #E47209;
+  }
+}
