@@ -340,6 +340,28 @@
 .pickAndFeed__wrapper-button {
   display: block;
   margin: 60px auto;
+  border: none;
+}
+
+.testimonials {
+  height: 919px;
+  width: 1600px;
+  padding-top: 140px;
+}
+.testimonials__wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+.testimonials__wrapper h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 47px;
+}
+.testimonials__wrapper__cards {
+  display: flex;
+  justify-content: space-between;
 }
 
 * {
