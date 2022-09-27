@@ -1,12 +1,16 @@
 @import "../break-points";
 
-
+.section-testimonials{
+  width:100%;
+  position:relative;
+}
 
 
 .testimonials {
   height: 919px;
   width: 1600px;
   padding-top: 140px;
+  margin:0 auto;
 
   &__wrapper {
     width: $large;
@@ -23,7 +27,41 @@ h2{
       display: flex;
       justify-content: space-between;
     }
-
-
+    &-progress {
+      width: 599px;
+      margin: 21px auto 0;
+      progress {
+        border:0;
+        width: 599px;
+        height: 8px;
+        border-radius: 5px;
+        background: #f1f1f1;
+      }
+      progress::-webkit-progress-bar {
+        border-radius: 5px;
+        background: #f1f1f1;
+      }
+      progress::-webkit-progress-value {
+        border-radius: 5px;
+        background: #ffb76b;
+      }
+      progress::-moz-progress-bar {
+        border-radius: 5px;
+        background: #ffb76b;
+      }
+    }
+    &-button {
+margin-top: 44px;
+    }
   }
+  &-leaveImage {
+position: absolute;
+    bottom:-100px;
+    right:0;
+  }
+}
+#button{
+border:none;
+  border-radius: 0px;
+
 }

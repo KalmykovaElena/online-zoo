@@ -343,10 +343,16 @@
   border: none;
 }
 
+.section-testimonials {
+  width: 100%;
+  position: relative;
+}
+
 .testimonials {
   height: 919px;
   width: 1600px;
   padding-top: 140px;
+  margin: 0 auto;
 }
 .testimonials__wrapper {
   width: 1160px;
@@ -362,6 +368,42 @@
 .testimonials__wrapper__cards {
   display: flex;
   justify-content: space-between;
+}
+.testimonials__wrapper-progress {
+  width: 599px;
+  margin: 21px auto 0;
+}
+.testimonials__wrapper-progress progress {
+  border: 0;
+  width: 599px;
+  height: 8px;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+.testimonials__wrapper-progress progress::-webkit-progress-bar {
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+.testimonials__wrapper-progress progress::-webkit-progress-value {
+  border-radius: 5px;
+  background: #ffb76b;
+}
+.testimonials__wrapper-progress progress::-moz-progress-bar {
+  border-radius: 5px;
+  background: #ffb76b;
+}
+.testimonials__wrapper-button {
+  margin-top: 44px;
+}
+.testimonials-leaveImage {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+}
+
+#button {
+  border: none;
+  border-radius: 0px;
 }
 
 * {
