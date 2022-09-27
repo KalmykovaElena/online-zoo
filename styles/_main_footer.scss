@@ -1,0 +1,196 @@
+@import "../break-points";
+
+input {
+  all: unset;
+}
+
+.footer {
+  width: $large;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 362px 1fr;
+  height: 100%;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-logo {
+      width: 82px;
+      height: 52px;
+      border: 1px solid #FFFFFF;
+      border-radius: 2px;
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 19.01px;
+      line-height: 22.82px;
+      text-align: center;
+      position: relative;
+
+      &-bamboo {
+        position: absolute;
+        bottom: 10.5px;
+        left: 8.5px;
+      }
+    }
+
+    &-links {
+      & li {
+        margin-bottom: 8px;
+      }
+
+      & a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #FFFFFF;
+
+        &:hover {
+          color: #4B9200;
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 22.4px;
+    display: flex;
+    align-items: end;
+    gap: 438px;
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      width: 472px;
+    }
+
+    &-item a {
+      color: #FFFFFF;
+      text-decoration: none;
+
+      &:hover {
+        color: #FFFFFF;
+        border-bottom: 1px solid #F9804B;
+      }
+    }
+  }
+
+  &__subscription {
+    padding-left: 31px;
+
+    & > div {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29px;
+      color: #ffffff;
+      margin-bottom: 14px;
+
+    }
+
+    &-form {
+
+
+      input {
+
+        height: 42px;
+        width: 228px;
+        background: none;
+        border: 0.7px solid #F9804B;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        padding: 10px 7px 10px 10px;
+        box-sizing: border-box;
+        color: white;
+
+        &:focus {
+          color: red;
+          border: 1px solid #D31414;
+        }
+
+        &:valid {
+          color: #4B9200;
+          border: 1px solid #4B9200;
+        }
+      }
+
+      &-button {
+        height: 42px;
+        width: 129px;
+        margin-left: 8px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          border-radius: 5px;
+
+
+        }
+      }
+
+      &:valid .footer__subscription-form-button {
+        color: #4B9200;
+        border: 1px solid #4B9200;
+      }
+
+      &:invalid .footer__subscription-form-button {
+        color: red;
+        border: 1px solid #D31414;
+      }
+
+
+    }
+
+    &-information {
+      height: 268px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: end;
+
+      div {
+        font-size: 16px;
+        font-weight: 10;
+
+        &:hover {
+          border-bottom: 1px solid #F9804B;
+        }
+
+        &:active {
+          color: #4B9200;
+          border-bottom: 1px solid #4B9200;
+
+        }
+      }
+
+
+    }
+  }
+}
+
+.circle {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: #C4C4C480;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 5px;
+  margin-right: 12px;
+
+  &:hover {
+    background-color: #4B9200;
+  }
+}
+
+.about a {
+  color: #F9804B;
+}
+

@@ -19,10 +19,9 @@
 
     &-bamboo {
       position: absolute;
-      bottom: 5.5px;
-      left: 15.5px;
-      width: 7.03px;
-      height: 20.98px;
+      bottom: 10.5px;
+      left: 8.5px;
+
     }
   }
 
@@ -46,6 +45,20 @@
     &-item a {
       color: #FFFFFF;
       text-decoration: none;
+      &:hover{
+        color: #FFFFFF;
+        border-bottom:1px solid #F9804B;
+      }
+      &:active{
+        color:#F9804B;
+
+      }
+
+
     }
+
   }
+}
+.about a{
+  color:#F9804B;
 }

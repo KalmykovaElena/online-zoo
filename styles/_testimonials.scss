@@ -27,31 +27,13 @@ h2{
       display: flex;
       justify-content: space-between;
     }
-    &-progress {
-      width: 599px;
-      margin: 21px auto 0;
-      progress {
-        border:0;
-        width: 599px;
-        height: 8px;
-        border-radius: 5px;
-        background: #f1f1f1;
-      }
-      progress::-webkit-progress-bar {
-        border-radius: 5px;
-        background: #f1f1f1;
-      }
-      progress::-webkit-progress-value {
-        border-radius: 5px;
-        background: #ffb76b;
-      }
-      progress::-moz-progress-bar {
-        border-radius: 5px;
-        background: #ffb76b;
-      }
+    &-progress{
+text-align: center;
     }
     &-button {
 margin-top: 44px;
+      border:none;
+      border-radius: 0px;
     }
   }
   &-leaveImage {
@@ -60,8 +42,31 @@ position: absolute;
     right:0;
   }
 }
-#button{
-border:none;
-  border-radius: 0px;
 
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 22px 0;
+  width: 599px;
+
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #e0e4e8;
+  border-radius: 1.3px;
+
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 8px;
+  width: 20%;
+  border-radius: 3px;
+  background: orange;
+  cursor: pointer;
+  -webkit-appearance: none;
 }

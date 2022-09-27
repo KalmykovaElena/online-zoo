@@ -3,10 +3,16 @@
 @import "../../styles/main-main-content";
 @import "../../styles/pickAndFeed";
 @import "../../styles/testimonials";
+@import "../../styles/main_footer";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  ul, li, a {
+    list-style: none;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
 }
 
 html {
@@ -38,7 +44,6 @@ body {
   text-transform: uppercase;
   height: 54px;
   width: 298px;
-  border-radius: 25px;
   padding: 16px 1px 16px 5px;;
   cursor: pointer;
   color: #FFFFFF;
@@ -54,4 +59,12 @@ body {
   &:active {
     background: #4B9200;
   }
+}
+footer {
+  width: 100%;
+  height: 443px;
+  background-color: #000000;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  //position: absolute;
 }
