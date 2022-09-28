@@ -695,14 +695,15 @@ input {
 }
 .chooseSize ul input[type=radio] {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   padding: 6px;
   background-clip: content-box;
   cursor: pointer;
   background-color: #FFEE2E;
   border-radius: 50%;
   position: relative;
+  top: 3px;
   z-index: 3;
 }
 .chooseSize ul input[type=radio]:checked {
@@ -717,11 +718,11 @@ input {
   content: "";
   display: block;
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -5px;
+  left: -5px;
   border: solid 1px orange;
-  width: 40px;
-  height: 40px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   z-index: 10;
 }
@@ -730,8 +731,8 @@ input {
 }
 .chooseSize ul input[type=radio]:checked:hover:before {
   border: solid 2px orange;
-  top: -11px;
-  left: -11px;
+  top: -6px;
+  left: -6px;
 }
 
 .chooseSize ul li:after {
