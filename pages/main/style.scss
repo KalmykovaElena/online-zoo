@@ -4,6 +4,7 @@
 @import "../../styles/pickAndFeed";
 @import "../../styles/testimonials";
 @import "../../styles/main_footer";
+@import "../../styles/donate";
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +37,7 @@ body {
   background-size: cover;
   width: 100%;
   height: 780px;
+
 }
 
 
@@ -67,4 +69,10 @@ footer {
   padding-top: 40px;
   padding-bottom: 50px;
   //position: absolute;
+}
+.donate {
+  background-image: url("../../assets/Giant Panda.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 470px;
 }

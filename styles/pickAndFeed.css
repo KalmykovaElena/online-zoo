@@ -1,3 +1,78 @@
-
-
-/*# sourceMappingURL=pickAndFeed.css.map */
+.pickAndFeed {
+  width: 1600px;
+  margin: 0 auto;
+  height: 1004px;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%);
+  padding-top: 69px;
+}
+.pickAndFeed__wrapper {
+  height: 835px;
+  width: 1160px;
+  background-color: rgba(253, 253, 255, 0.5215686275);
+  margin: 0 auto 100px;
+  border-radius: 20px;
+  padding-top: 41px;
+}
+.pickAndFeed__wrapper-text {
+  color: #333B41;
+}
+.pickAndFeed__wrapper-text h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  color: #FE9013;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.pickAndFeed__wrapper-text div:nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+  margin-left: 34px;
+  margin-bottom: 40px;
+}
+.pickAndFeed__wrapper-text div:nth-child(3) {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-left: 34px;
+  margin-bottom: 10px;
+}
+.pickAndFeed__wrapper-text div:nth-child(4) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-left: 34px;
+  height: 42px;
+  width: 863px;
+}
+.pickAndFeed__wrapper-text div:nth-child(4) a {
+  color: #333B41;
+  line-height: 20.8px;
+  -webkit-text-decoration-color: #FE9013;
+          text-decoration-color: #FE9013;
+  text-underline-offset: 4px;
+}
+.pickAndFeed__wrapper-text h3 {
+  margin: 60px auto 40px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47px;
+  width: 209px;
+}
+.pickAndFeed__wrapper-images {
+  width: 764px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 168px 130px 168px 130px 168px;
+}
+.pickAndFeed__wrapper-images-row {
+  margin: 54px auto;
+}
+.pickAndFeed__wrapper-button {
+  display: block;
+  margin: 60px auto;
+  border: none;
+  border-radius: 25px;
+}/*# sourceMappingURL=pickAndFeed.css.map */
