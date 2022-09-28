@@ -43,14 +43,15 @@
     }
 
     &-item a {
-      color: #FFFFFF;
       text-decoration: none;
-      &:hover{
+      &:hover {
         color: #FFFFFF;
-        border-bottom:1px solid #F9804B;
+        border-bottom: 1px solid #F9804B;
       }
       &:active{
         color:#F9804B;
+
+
 
       }
 

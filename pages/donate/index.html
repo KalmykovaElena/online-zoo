@@ -26,7 +26,7 @@
                 <li class="header__navigation-item "><a href="https://rolling-scopes-school.github.io/kalmykovaelena-JSFE2022Q3/online-zoo/pages/main/ ">About</a></li>
                 <li class="header__navigation-item"><a href="#">Map</a></li>
                 <li class="header__navigation-item"><a href="#">Zoos</a></li>
-                <li class="header__navigation-item donateLink"><a href="#">Donate</a></li>
+                <li class="header__navigation-item donateLink"><a href="#"style="pointer-events:none">Donate</a></li>
                 <li class="header__navigation-item"><a href="#">Contact us</a></li>
             </ul>
             <div class="header__navigation-info">
@@ -64,11 +64,11 @@
                     <li><input type="radio" name="count"><label >$25</label></li>
                 </ul>
                 <form class="changeSum" >
-                <input id="changeSum" type="number" min="1000" class="anotherAmount" placeholder="Another amount" >
+                <input id="changeSum" type="number"  max="999" class="anotherAmount" placeholder="Another amount" >
                 <label for="changeSum" class="changeSum-label">$</label>
                     <div>
                     <div><input class="changeSum-input"type="radio" name="sum"><span class="changeSum-text" >Monthly</span></div>
-                    <div><input class="changeSum-input" type="radio" name="sum"><span class="changeSum-text" >Once</span></div>
+                    <div><input class="changeSum-input" type="radio" name="sum" checked><span class="changeSum-text" >Once</span></div>
                     </div>
                     <button class="pickAndFeed__wrapper-button button">Feed a friend now</button>
                 </form>
@@ -81,7 +81,59 @@
 
 </div>
 </section>
+<footer>
+    <div class="footer">
+        <div class="footer__links">
+            <a href=" https://rolling-scopes-school.github.io/kalmykovaelena-JSFE2022Q3/online-zoo/pages/main/ ">
+                <h1 class="footer__links-logo">
+                    PetStory online
+                    <img src="../../assets/bamboo.svg" alt="#" class="footer__links-logo-bamboo">
+                </h1>
+            </a>
+            <form action="../donate/index.html">
+                <button class="footer__links-button button">donate for volunteers</button>
+            </form>
+            <div class="footer__links-links">
+                <ul>
+                    <li><a href="https://ru-ru.facebook.com/">
+                        <div class="circle"><img src="../../assets/Fill%20211.png" alt=""></div>
+                        Facebook</a></li>
+                    <li><a href="https://twitter.com/">
+                        <div class="circle"><img src="../../assets/Fill%20172.png" alt=""></div>
+                        Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">
+                        <div class="circle"><img src="../../assets/Fill%20166.png" alt=""></div>
+                        Instagram</a></li>
+                    <li><a href="https://www.youtube.com/">
+                        <div class="circle"><img src="../../assets/Fill%20213.png" alt=""></div>
+                        YouTube</a></li>
+                </ul>
+            </div>
+        </div>
 
+        <nav class="footer__navigation">
+            <ul class="footer__navigation-list">
+                <li class="footer__navigation-item "><a href="https://rolling-scopes-school.github.io/kalmykovaelena-JSFE2022Q3/online-zoo/pages/main/" >About</a></li>
+                <li class="footer__navigation-item"><a href="#">Map</a></li>
+                <li class="footer__navigation-item"><a href="#">Zoos</a></li>
+                <li class="footer__navigation-item"><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer__subscription">
+            <div>Subscribe to our news</div>
+            <form action="" class="footer__subscription-form">
+                <input type="email" placeholder="Enter your email" class="footer__subscription-form-input" required>
+                <button type="submit" class="footer__subscription-form-button">Submit</button>
+            </form>
+            <div class="footer__subscription-information">
+                <div>Designed by Alisa Samborskaya</div>
+                <div>©RSSchool & ©Yem Digital 2021</div>
+            </div>
+        </div>
+
+    </div>
+</footer>
 
 </body>
 </html>

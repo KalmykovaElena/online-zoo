@@ -13,6 +13,11 @@ padding-top: 69px;
     padding-top: 41px;
 &-text{
   color: #333B41;
+  & a{
+    &:hover{
+      border-bottom: 1px solid #F9804B;
+    }
+  }
   h2{
 
     font-size: 48px;

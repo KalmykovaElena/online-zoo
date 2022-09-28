@@ -37,7 +37,6 @@
   width: 472px;
 }
 .header__navigation-item a {
-  color: #FFFFFF;
   text-decoration: none;
 }
 .header__navigation-item a:hover {
@@ -294,6 +293,9 @@
 }
 .pickAndFeed__wrapper-text {
   color: #333B41;
+}
+.pickAndFeed__wrapper-text a:hover {
+  border-bottom: 1px solid #F9804B;
 }
 .pickAndFeed__wrapper-text h2 {
   font-size: 48px;
