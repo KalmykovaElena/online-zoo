@@ -1,7 +1,7 @@
 @import "../break-points";
 .mainContent {
   width: 100%;
-  height: 1729px;
+  height:1699px;
   background: #FFFFFF;
   color: #333B41;
   position: relative;
@@ -133,7 +133,7 @@
     }
 
     &__info {
-      padding: 8px 12px 14px 16px;
+      padding: 5px 12px 14px 14px;
       height: 60px;
       width: 366px;
       margin: -3px auto 0;
@@ -176,7 +176,7 @@
     margin-top: 45%;
   }
   &-button{
-    margin: 0 auto;
+    margin: -30px auto 0;
     border-radius: 25px;
   }
 

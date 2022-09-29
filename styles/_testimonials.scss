@@ -7,9 +7,9 @@
 
 
 .testimonials {
-  height: 919px;
+  height: 911px;
   width: 1600px;
-  padding-top: 140px;
+  padding-top: 128px;
   margin:0 auto;
 
   &__wrapper {
@@ -31,14 +31,14 @@ h2{
 text-align: center;
     }
     &-button {
-margin-top: 44px;
+margin-top: 10px;
       border:none;
       border-radius: 0px;
     }
   }
   &-leaveImage {
 position: absolute;
-    bottom:-100px;
+    bottom:-130px;
     right:0;
   }
 }
