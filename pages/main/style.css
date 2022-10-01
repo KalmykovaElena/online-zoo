@@ -1,5 +1,5 @@
 .header {
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
   display: flex;
 }
@@ -52,6 +52,33 @@
   color: #F9804B;
 }
 
+@media screen and (max-width: 1599px) {
+  .header {
+    min-width: 94%;
+    margin: 0 30px;
+  }
+  .header__navigation {
+    width: 80%;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .header__navigation-list {
+    justify-content: flex-start;
+    gap: 48px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header {
+    position: relative;
+  }
+  .header {
+    min-width: 94%;
+    margin: 0 30px;
+  }
+  .header__navigation {
+    width: 85%;
+  }
+}
 .watchAnimal__content {
   width: 1160px;
   margin: 0 auto;
@@ -62,9 +89,9 @@
   height: 465px;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border-radius: 50%;
-  margin-left: 587px;
   margin-bottom: 69px;
   position: relative;
+  left: 587px;
 }
 .watchAnimal__content-text {
   font-size: 106px;
@@ -93,6 +120,55 @@
   text-align: center;
 }
 
+@media screen and (max-width: 1599px) {
+  .watchAnimal__content {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .watchAnimal__content-circle {
+    width: 32vw;
+    height: 32vw;
+    left: 37vw;
+    top: -8vw;
+    z-index: 10;
+    margin: 0;
+  }
+  .watchAnimal__content-text {
+    font-size: 6.6vw;
+    line-height: 5vw;
+    top: 14%;
+    left: 16%;
+  }
+  .watchAnimal__content-button {
+    margin-left: 47vw;
+    margin-top: -3vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .watchAnimal__content-circle {
+    width: 36.7vw;
+    height: 36.7vw;
+    left: 32vw;
+    top: -10vw;
+    z-index: 10;
+    margin: 0;
+  }
+  .watchAnimal__content-text {
+    font-size: 8.6vw;
+    line-height: 6.5vw;
+    top: 14%;
+    left: 16%;
+  }
+  .watchAnimal__content-button {
+    margin-left: 42.5vw;
+    margin-top: -5.5vw;
+  }
+  .watchAnimal__content-button div {
+    margin-right: 8px;
+  }
+}
 .mainContent {
   width: 100%;
   height: 1699px;
@@ -140,6 +216,7 @@
   position: absolute;
   top: -128px;
   right: 0;
+  transition: 0.5s;
 }
 .mainContent__slider {
   display: grid;
@@ -164,23 +241,34 @@
 .mainContent__pets-card {
   width: 366px;
   position: relative;
-}
-.mainContent__pets-photo {
-  position: relative;
+  border: 1px solid #fa6f32;
   border-radius: 5px;
-  transition: 1s;
+  margin-bottom: 20px;
+  overflow: hidden;
+  z-index: 30;
 }
-.mainContent__pets-photo__info {
+.mainContent__pets-card-info {
   display: flex;
   justify-content: space-between;
   padding: 8px 12px 14px 16px;
 }
-.mainContent__pets-photo-mask {
+.mainContent__pets-card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0px;
+  height: 382px;
+  background-color: #000000;
+  z-index: 40;
+  opacity: 0;
+  transition: 0.5s;
+}
+.mainContent__pets-card-mask {
   position: absolute;
   font-size: 24px;
-  height: 120px;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -191,25 +279,34 @@
   left: 0;
   right: 0;
   opacity: 0;
+  z-index: 50;
 }
-.mainContent__pets-photo-mask-name {
+.mainContent__pets-card-mask-name {
   text-transform: uppercase;
 }
-.mainContent__pets-photo:hover {
+.mainContent__pets-card-photo {
+  position: relative;
+  border-radius: 5px;
+  transition: 1s;
+  height: 364px;
+  overflow: hidden;
+}
+.mainContent__pets-card:hover {
+  border: none;
+}
+.mainContent__pets-card:hover > .mainContent__pets-card-photo {
   transform: scale(1.1);
 }
-.mainContent__pets-photo:hover + .mainContent__pets-photo-mask {
-  opacity: 1;
-  top: 226px;
+.mainContent__pets-card:hover::before {
+  opacity: 0.5;
 }
-.mainContent__pets-photo:hover ~ .mainContent__pets-photo__info {
+.mainContent__pets-card:hover > .mainContent__pets-card-info {
   display: none;
   border: none;
 }
-.mainContent__pets-card {
-  border: 1px solid #fa6f32;
-  border-radius: 5px;
-  margin-bottom: 20px;
+.mainContent__pets-card:hover > .mainContent__pets-card-mask {
+  opacity: 1;
+  top: 226px;
 }
 .mainContent__pets__info {
   padding: 5px 12px 14px 14px;
@@ -254,6 +351,11 @@
   position: absolute;
   height: 460px;
   bottom: 0;
+  transition: 0.3s;
+}
+.mainContent .small-display {
+  opacity: 0;
+  transition: 0.5s;
 }
 .mainContent__secondFlower {
   height: 275px;
@@ -277,6 +379,105 @@
   background: #E47209;
 }
 
+@media screen and (min-width: 1350px) and (max-width: 1599px) {
+  .mainContent__backstage-flower {
+    right: -1vw;
+  }
+  .mainContent__backstage-text h2 {
+    font-size: 3vw;
+  }
+  .mainContent__firstFlower {
+    width: 29vw;
+    height: 28vw;
+  }
+  .mainContent__secondFlower {
+    width: 24vw;
+    height: 18vw;
+  }
+  .mainContent__backstage-text, .mainContent__backstage-text div {
+    width: 29vw;
+  }
+}
+@media screen and (max-width: 1349px) {
+  .mainContent__backstage-flower {
+    opacity: 0;
+  }
+  .mainContent__pets-images {
+    width: 1000px;
+    height: 801px;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 0 auto;
+  }
+  .mainContent__pets-card {
+    width: 294px;
+    height: 354px;
+    margin: 0;
+  }
+  .mainContent__pets-card::before {
+    height: 354px;
+  }
+  .mainContent__pets-card-photo {
+    height: 294px;
+  }
+  .mainContent__slider {
+    padding-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .mainContent__slider .arrow {
+    position: absolute;
+    padding-bottom: 20px;
+  }
+  .mainContent__slider:first-child {
+    top: 33%;
+    left: 35%;
+  }
+  .mainContent__slider:last-child {
+    top: 33%;
+    right: 33%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mainContent {
+    height: 1643px;
+  }
+  .mainContent__backstage {
+    width: 940px;
+    grid-column-gap: 31px;
+    margin: 51px auto 152px;
+  }
+  .mainContent__backstage-flower {
+    display: none;
+  }
+  .mainContent__backstage .image {
+    margin-top: 9px;
+    width: 45.5vw;
+    height: 40.8vw;
+    overflow: hidden;
+  }
+  .mainContent__backstage .image img {
+    position: relative;
+    left: -81px;
+  }
+  .mainContent__backstage-text div {
+    width: 454px;
+  }
+  .mainContent__firstFlower {
+    opacity: 0;
+  }
+  .mainContent .small-display {
+    opacity: 1;
+    width: 21vw;
+    height: 20vw;
+    left: -12px;
+  }
+  .mainContent__secondFlower {
+    width: 24vw;
+    height: 18vw;
+  }
+}
 .pickAndFeed {
   width: 100%;
   margin: 0 auto;
@@ -332,6 +533,7 @@
 .pickAndFeed__wrapper-text div:nth-child(4) a {
   color: #333B41;
   line-height: 20.8px;
+  text-decoration: underline;
   text-decoration-color: #FE9013;
   text-underline-offset: 4px;
 }
@@ -358,6 +560,45 @@
   border-radius: 25px;
 }
 
+@media screen and (max-width: 1599px) {
+  .pickAndFeed {
+    height: 876px;
+    padding-top: 30px;
+  }
+  .pickAndFeed__wrapper {
+    width: 94vw;
+    height: 800px;
+  }
+  .pickAndFeed__wrapper-text h2 {
+    margin-bottom: 20px;
+  }
+  .pickAndFeed__wrapper-text div:nth-child(2) {
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+  .pickAndFeed__wrapper-text div:nth-child(3) {
+    width: 80vw;
+    margin-left: 5%;
+  }
+  .pickAndFeed__wrapper-text div:nth-child(4) {
+    width: 80vw;
+    margin-left: 5%;
+  }
+  .pickAndFeed__wrapper-text h3 {
+    margin-top: 40px;
+  }
+  .pickAndFeed__wrapper-button {
+    margin: 67px auto;
+    letter-spacing: 0.5px;
+  }
+  .pickAndFeed__wrapper .button {
+    padding: 16px 0px 16px 7px;
+    font-size: 14px;
+  }
+  .pickAndFeed__wrapper-images-row {
+    margin: 58px auto;
+  }
+}
 .section-testimonials {
   width: 100%;
   position: relative;
@@ -426,6 +667,47 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
+@media screen and (max-width: 1599px) {
+  .testimonials {
+    width: 100vw;
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .testimonials {
+    height: 840px;
+  }
+  .testimonials__wrapper {
+    width: 940px;
+  }
+  .testimonials__wrapper h2 {
+    margin-bottom: 30px;
+  }
+  .testimonials__wrapper__cards img {
+    width: 293px;
+    height: 391px;
+  }
+  .testimonials__wrapper__cards img:last-child {
+    display: none;
+  }
+  .testimonials__wrapper-progress input[type=range] {
+    width: 390px;
+    height: 8px;
+  }
+  .testimonials__wrapper-button {
+    margin: 27px 0 0 1px;
+    border-radius: 5px;
+  }
+  .testimonials__wrapper .button {
+    padding: 2px 0 0 7px;
+  }
+  .testimonials-leaveImage {
+    height: 311px;
+    width: 193px;
+    right: 0;
+    top: 609px;
+  }
+}
 input {
   all: unset;
 }
@@ -552,6 +834,7 @@ input {
 .footer__subscription-form:invalid .footer__subscription-form-button {
   color: red;
   border: 1px solid #D31414;
+  font-size: 16px;
 }
 .footer__subscription-information {
   height: 268px;
@@ -591,6 +874,32 @@ input {
   color: #F9804B;
 }
 
+@media screen and (max-width: 1220px) {
+  .footer {
+    width: 94%;
+    position: relative;
+  }
+  .footer__subscription > div {
+    margin-left: -15vw;
+  }
+  .footer__subscription-form {
+    position: absolute;
+    top: 41px;
+    right: 3.1vw;
+  }
+  .footer__subscription-information {
+    height: 312px;
+  }
+  .footer__links-button {
+    margin-top: 23px;
+  }
+  .footer__navigation div {
+    letter-spacing: 0;
+  }
+  .footer__navigation-list {
+    width: 332px;
+  }
+}
 .donateLink a {
   color: #F9804B;
 }
@@ -871,7 +1180,7 @@ body {
 .watchAnimal {
   background-image: url("../../assets/Giant Panda.jpg");
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
   height: 780px;
 }
 
@@ -908,7 +1217,26 @@ footer {
   background-size: cover;
   background-position: 0 -114px;
   width: 100%;
-  height: 470px;
+  height: 100%;
+}
+
+@media screen and (max-width: 1599px) {
+  header {
+    position: relative;
+    z-index: 20;
+  }
+  .watchAnimal {
+    height: 50vw;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .watchAnimal {
+    height: 554px;
+    background-image: url("../../assets/Giant Panda2.png");
+    background-size: cover;
+    background-position: 0 -2.6vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -31,11 +31,13 @@ header {
 body {
   font-family: 'Roboto', sans-serif;
 }
-
+//.container{
+//  min-width: 1160px;
+//}
 .watchAnimal {
   background-image: url("../../assets/Giant Panda.jpg");
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
   height: 780px;
 
 }
@@ -75,5 +77,30 @@ footer {
   background-size: cover;
   background-position: 0 -114px;
   width: 100%;
-  height: 470px;
+  height: 100%;
+}
+@media screen and (max-width: 1599px) {
+  header {
+    position: relative;
+    z-index: 20;
+  }
+  .watchAnimal {
+height: 50vw;
+  padding-bottom: 20px;
+
+  }
+}
+@media screen and (max-width: 1000px) {
+
+  .watchAnimal {
+    height: 554px;
+    background-image: url("../../assets/Giant Panda2.png");
+    background-size: cover;
+    background-position: 0 -2.6vw;
+    //background-repeat: no-repeat;
+    //background-position: top center;
+
+
+
+  }
 }

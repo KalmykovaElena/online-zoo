@@ -148,6 +148,7 @@ position: relative;
       &:invalid .footer__subscription-form-button {
         color: red;
         border: 1px solid #D31414;
+        font-size: 16px;
       }
 
 
@@ -198,4 +199,37 @@ letter-spacing: 1.5px;
 .about a {
   color: #F9804B;
 }
+@media screen and(max-width: 1220px){
+  .footer {
+    width: 94%;
+position: relative;
+    &__subscription {
+& >div{
+  margin-left: -15vw;
+}
+     &-form {
+        position: absolute;
+        top: 41px;
+        right: 3.1vw;
+      }
+      &-information{
+        height: 312px;
+      }
+    }
+    &__links {
+      &-button {
 
+        margin-top: 23px;
+      }
+
+    }
+    &__navigation{
+div{
+  letter-spacing: 0;
+}
+      &-list{
+        width:332px;
+      }
+    }
+  }
+}

@@ -70,3 +70,56 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
 }
+@media screen and (max-width: 1599px){
+  .testimonials {
+    width: 100vw;
+
+    padding-top: 100px;
+  }
+
+}
+@media screen and (max-width: 1250px){
+  .testimonials {
+    height: 840px;
+    &__wrapper{
+      width:940px;
+      h2{
+        margin-bottom: 30px;
+      }
+    &__cards {
+      & img{
+        width:293px;
+        height: 391px;
+      }
+      & img:last-child {
+        display: none;
+      }
+    }
+      &-progress{
+        input[type=range] {
+          width: 390px;
+          height: 8px;
+        }
+      }
+      &-button{
+        margin:27px 0 0 1px;
+        border-radius: 5px;
+      }
+      .button{
+        padding:2px 0 0 7px;
+      }
+  }
+    &-leaveImage{
+      height: 311px;
+      width: 193px;
+      right: 0;
+      top: 609px;
+
+
+    }
+  }
+}
+@media screen and (max-width: 1000px){
+
+}
+

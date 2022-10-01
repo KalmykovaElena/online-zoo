@@ -11,9 +11,10 @@
       height: 465px;
       background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
       border-radius: 50%;
-      margin-left: 587px;
+
       margin-bottom: 69px;
       position: relative;
+      left: 587px;
     }
     &-text {
       font-size: 106px;
@@ -44,3 +45,63 @@
     }
   }
 }
+@media screen and (max-width: 1599px){
+  .watchAnimal {
+
+    &__content {
+      width: 72%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-circle {
+        width: 32vw;
+        height: 32vw;
+        left:37vw;
+        top: -8vw;
+        z-index:10;
+        margin: 0;
+      }
+        &-text {
+          font-size: 6.6vw;
+          line-height: 5vw;
+          top: 14%;
+          left: 16%;
+        }
+      &-button {
+        margin-left: 47vw;
+        margin-top: -3vw;
+      }
+
+    }
+  }
+}
+@media screen and (max-width: 1000px){
+  .watchAnimal {
+
+    &__content {
+
+      &-circle {
+        width: 36.7vw;
+        height: 36.7vw;
+        left:32vw;
+        top: -10vw;
+        z-index:10;
+        margin: 0;
+      }
+      &-text {
+          font-size: 8.6vw;
+        line-height: 6.5vw;
+        top: 14%;
+        left: 16%;
+      }
+      &-button{
+        margin-left: 42.5vw;
+        margin-top: -5.5vw;
+
+      }
+      &-button div {
+        margin-right: 8px;
+      }
+    }
+  }
+      }

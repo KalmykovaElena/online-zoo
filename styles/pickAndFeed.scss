@@ -53,9 +53,11 @@ margin-bottom: 30px;
     margin-left: 97px;
     height: 42px;
     width: 863px;
+
 a{
   color: #333B41;
   line-height:20.8px;
+  text-decoration: underline;
   text-decoration-color: #FE9013;
   text-underline-offset: 4px;
 }
@@ -90,4 +92,48 @@ display: block;
   }
 
 
+}
+@media screen  and (max-width: 1599px){
+.pickAndFeed{
+  height: 876px;
+  padding-top:30px ;
+  &__wrapper {
+    width: 94vw;
+height: 800px;
+    &-text{
+      h2 {
+        margin-bottom: 20px;
+      }
+      div:nth-child(2) {
+
+        margin-left: 5%;
+        margin-bottom: 20px;
+      }
+      div:nth-child(3) {
+        width:80vw;
+        margin-left: 5%;
+      }
+      div:nth-child(4) {
+        width:80vw;
+        margin-left: 5%;
+      }
+      h3{
+        margin-top: 40px;
+      }
+    }
+&-button{
+  margin: 67px auto;
+  letter-spacing: 0.5px;
+
+}
+    .button{
+      padding: 16px 0px 16px 7px;
+
+      font-size: 14px;
+    }
+    &-images-row {
+      margin: 58px auto;
+    }
+  }
+}
 }

@@ -1,7 +1,7 @@
 @import "../break-points";
 
 .header {
-  width: $large;
+  max-width: $large;
   margin: 0 auto;
   display: flex;
 
@@ -63,4 +63,31 @@
 }
 .about a{
   color:#F9804B;
+}
+@media screen and (max-width: 1599px) {
+  .header {
+      min-width:94%;
+    margin:0 30px;
+    &__navigation {
+     width: 80%;
+      gap: 0;
+justify-content: space-between;
+      &-list {
+        justify-content: flex-start;
+        gap: 48px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px){
+  header{
+    position: relative;
+  }
+  .header{
+    min-width:94%;
+    margin:0  30px;
+    &__navigation {
+      width:85%;
+    }
+}
 }
