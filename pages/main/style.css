@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   gap: 438px;
+  transition: 0.3s;
 }
 .header__navigation-list {
   display: flex;
@@ -46,6 +47,18 @@
 }
 .header__navigation-item a:active {
   color: #F9804B;
+}
+.header .burger-menu {
+  width: 18px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  transition: 0.3s;
+}
+.header .burger-menu > div {
+  border: 1px solid #ffffff;
 }
 
 .about a {
@@ -77,6 +90,38 @@
   }
   .header__navigation {
     width: 85%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__navigation {
+    display: none;
+  }
+  .header .burger-menu {
+    display: flex;
+    position: relative;
+    top: 11px;
+  }
+  .header__logo {
+    font-size: 12.29px;
+    height: 29px;
+    width: 47px;
+    line-height: 14.75px;
+    border: none;
+  }
+  .header__logo-bamboo {
+    height: 13.56px;
+    bottom: -0.5px;
+    left: 4.5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header {
+    margin: 0;
+    padding: 0 10px;
   }
 }
 .watchAnimal__content {
@@ -167,6 +212,28 @@
   }
   .watchAnimal__content-button div {
     margin-right: 8px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .watchAnimal__content-circle {
+    left: 38vw;
+    top: -7.5vw;
+  }
+  .watchAnimal__content-text {
+    top: 16%;
+  }
+  .watchAnimal__content-button {
+    margin-left: -10.5vw;
+    margin-top: -7.5vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .watchAnimal__content-circle {
+    left: 37vw;
+    top: -19.5vw;
+  }
+  .watchAnimal__content-button {
+    margin-top: 1.5vw;
   }
 }
 .mainContent {
@@ -399,8 +466,29 @@
   }
 }
 @media screen and (max-width: 1349px) {
+  .mainContent {
+    height: 1643px;
+  }
+  .mainContent__backstage {
+    width: 94vw;
+    grid-column-gap: 31px;
+    margin: 51px auto 152px;
+  }
+  .mainContent__backstage .image {
+    margin-top: 9px;
+    width: 45.5vw;
+    height: 40.8vw;
+    overflow: hidden;
+  }
+  .mainContent__backstage .image img {
+    position: relative;
+    left: -81px;
+  }
   .mainContent__backstage-flower {
-    opacity: 0;
+    display: none;
+  }
+  .mainContent__backstage-text div {
+    width: 454px;
   }
   .mainContent__pets-images {
     width: 1000px;
@@ -439,30 +527,16 @@
     right: 33%;
   }
 }
-@media screen and (max-width: 1000px) {
-  .mainContent {
-    height: 1643px;
+@media screen and (min-width: 641px) and (max-width: 780px) {
+  .mainContent__backstage-text {
+    width: 370px;
   }
-  .mainContent__backstage {
-    width: 940px;
-    grid-column-gap: 31px;
-    margin: 51px auto 152px;
-  }
-  .mainContent__backstage-flower {
-    display: none;
-  }
-  .mainContent__backstage .image {
-    margin-top: 9px;
-    width: 45.5vw;
-    height: 40.8vw;
-    overflow: hidden;
-  }
-  .mainContent__backstage .image img {
-    position: relative;
-    left: -81px;
+  .mainContent__backstage-text h2 {
+    font-size: 28px;
+    line-height: 34.5px;
   }
   .mainContent__backstage-text div {
-    width: 454px;
+    width: 340px;
   }
   .mainContent__firstFlower {
     opacity: 0;
@@ -476,6 +550,30 @@
   .mainContent__secondFlower {
     width: 24vw;
     height: 18vw;
+  }
+}
+@media screen and (max-width: 640px) {
+  .mainContent__backstage {
+    margin-bottom: 31px;
+  }
+  .mainContent__backstage .image {
+    display: none;
+  }
+  .mainContent__backstage-flower {
+    display: block;
+    height: 476px;
+    top: -62px;
+    right: -27px;
+  }
+  .mainContent__backstage-description {
+    margin-bottom: 32px;
+  }
+  .mainContent__backstage-title {
+    margin-left: 4px;
+    margin-bottom: 20px;
+  }
+  .mainContent__backstage-text div {
+    width: 76vw;
   }
 }
 .pickAndFeed {
@@ -880,7 +978,10 @@ input {
     position: relative;
   }
   .footer__subscription > div {
-    margin-left: -15vw;
+    width: 367px;
+    position: absolute;
+    top: -1px;
+    right: 3.1vw;
   }
   .footer__subscription-form {
     position: absolute;
@@ -1232,10 +1333,32 @@ footer {
 }
 @media screen and (max-width: 1000px) {
   .watchAnimal {
-    height: 554px;
+    height: 55.4vw;
     background-image: url("../../assets/Giant Panda2.png");
     background-size: cover;
     background-position: 0 -2.6vw;
+  }
+}
+@media screen and (max-width: 780px) {
+  header {
+    height: 34px;
+    padding: 0;
+    position: fixed;
+    z-index: 500;
+  }
+  .watchAnimal {
+    height: 59.2vw;
+    background-image: url("../../assets/Giant Panda3.png");
+    background-size: cover;
+    background-position: 0 -0.4vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .watchAnimal {
+    height: 69.3vw;
+    background-image: url("../../assets/Giant Panda-4.png");
+    background-size: cover;
+    background-position: -5vw 7.6vw;
   }
 }
 

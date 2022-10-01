@@ -93,7 +93,7 @@ height: 50vw;
 @media screen and (max-width: 1000px) {
 
   .watchAnimal {
-    height: 554px;
+    height: 55.4vw;
     background-image: url("../../assets/Giant Panda2.png");
     background-size: cover;
     background-position: 0 -2.6vw;
@@ -102,5 +102,27 @@ height: 50vw;
 
 
 
+  }
+}
+@media screen and (max-width: 780px) {
+  header {
+    height: 34px;
+    padding: 0;
+    position: fixed;
+    z-index: 500;
+  }
+  .watchAnimal {
+    height: 59.2vw;
+    background-image: url("../../assets/Giant Panda3.png");
+    background-size: cover;
+    background-position: 0 -0.4vw;
+  }
+}
+@media screen and (max-width: 480px){
+  .watchAnimal {
+    height: 69.3vw;
+    background-image: url("../../assets/Giant Panda-4.png");
+    background-size: cover;
+    background-position: -5vw 7.6vw;
   }
 }

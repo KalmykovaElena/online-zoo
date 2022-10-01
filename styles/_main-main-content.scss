@@ -286,10 +286,27 @@
 }
 @media screen  and (max-width: 1349px) {
   .mainContent {
+    height: 1643px;
     &__backstage {
+      width: 94vw;
+      grid-column-gap: 31px;
+      margin: 51px auto 152px;
+      .image {
+        margin-top: 9px;
+        width: 45.5vw;
+        height: 40.8vw;
+        overflow: hidden;
 
+        img {
+          position: relative;
+          left: -81px;
+        }
+      }
       &-flower {
-        opacity: 0;
+        display: none;
+      }
+      &-text div {
+        width: 454px;
       }
     }
     &__pets {
@@ -337,38 +354,22 @@
     }
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen  and (min-width: 641px) and (max-width: 780px) {
   .mainContent {
-height: 1643px;
+
     &__backstage {
-      width: 940px;
-      grid-column-gap: 31px;
-      margin: 51px auto 152px;
 
-      &-flower {
-        display: none;
-      }
-
-      .image {
-        margin-top: 9px;
-        width: 45.5vw;
-        height: 40.8vw;
-        overflow: hidden;
-
-        img {
-          position: relative;
-          left: -81px;
-        }
-      }
-
-      &-text div {
-        width: 454px;
-      }
-
+&-text {
+  width: 370px;
+  h2 {
+    font-size: 28px;
+    line-height: 34.5px;
+  }
+  div{
+    width: 340px;
+  }
+}
     }
-
-
-
 
     &__firstFlower {
       opacity:0;
@@ -386,9 +387,41 @@ height: 1643px;
     }
   }
 }
+@media screen  and (max-width: 640px){
+  .mainContent {
+    &__backstage {
+      margin-bottom: 31px;
+      .image {
+        display: none;
+      }
+      &-flower{
+        display: block;
+        height: 476px;
+        top: -62px;
+        right: -27px;
+      }
+      &-description {
+
+        margin-bottom: 32px;
+      }
+      &-title{
+        margin-left: 4px;
+        margin-bottom: 20px;
+      }
+      &-text{
+        div {
+          width: 76vw;
+        }
+      }
+    }
+  }
 
 
+}
 
+@media screen  and (max-width: 585px){
+
+}
 
 
 

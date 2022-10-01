@@ -105,3 +105,44 @@
     }
   }
       }
+@media screen and (max-width: 999px){
+  .watchAnimal {
+
+    &__content {
+
+      &-circle {
+        left: 38vw;
+        top: -7.5vw;
+
+      }
+      &-text {
+        top: 16%;
+      }
+      &-button{
+          margin-left: -10.5vw;
+          margin-top: -7.5vw;
+
+      }
+      &-button div {
+
+      }
+    }
+  }
+      }
+@media screen and (max-width: 480px){
+  .watchAnimal {
+    &__content {
+
+      &-circle {
+        left: 37vw;
+        top: -19.5vw;
+
+      }
+
+      &-button {
+        margin-top: 1.5vw;
+
+      }
+    }
+  }
+}

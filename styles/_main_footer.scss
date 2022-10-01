@@ -205,7 +205,10 @@ letter-spacing: 1.5px;
 position: relative;
     &__subscription {
 & >div{
-  margin-left: -15vw;
+  width:367px;
+  position: absolute;
+  top: -1px;
+  right: 3.1vw;
 }
      &-form {
         position: absolute;
