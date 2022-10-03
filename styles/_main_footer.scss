@@ -207,8 +207,13 @@ position: relative;
 & >div{
   width:367px;
   position: absolute;
-  top: -1px;
-  right: 3.1vw;
+  top: 42px;
+  right: -2.9vw;
+  &:first-child{
+    position: relative;
+    top:0;
+    right:150px;
+  }
 }
      &-form {
         position: absolute;
@@ -220,6 +225,9 @@ position: relative;
       }
     }
     &__links {
+      &-links{
+        margin:0;
+      }
       &-button {
 
         margin-top: 23px;
@@ -227,12 +235,162 @@ position: relative;
 
     }
     &__navigation{
+      bottom:0;
 div{
   letter-spacing: 0;
 }
       &-list{
         width:332px;
       }
+    }
+  }
+}
+@media screen and(max-width: 935px) {
+  .footer {
+    position: relative;
+    width: 94%;
+   display: flex;
+    height:282px;
+    &__links {
+
+      &-logo {
+
+      }
+    }
+
+    &__subscription {
+      &-form {
+        display: none;
+      }
+
+      & > div {
+
+        &:first-child {
+
+        }
+      }
+
+      &-information {
+height: 36vw;
+        & div{
+          right: -5.5vw;
+          letter-spacing: -0.1px;
+          position:relative;
+          right:31px;
+        }
+      }
+    }
+
+    &__links {
+      &-links {
+position: absolute;
+        top: 10px;
+        right: -11px;
+        display: flex;
+        & li {
+          margin-bottom: 19px;
+        }
+      }
+      &-logo{
+        top:12px
+      }
+    }
+
+    &-button {
+
+    }
+    .button {
+      position: absolute;
+      top: 72px;
+      border-radius:10px;
+    }
+
+    &__navigation {
+      bottom: 12px;
+      right: 80px;
+      width:46.5vw;
+    }
+
+
+    .network {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: 630px) {
+  .footer {
+height: 100%;
+display: block;
+    &__links {
+
+      &-logo {
+border:none;
+        width:40vw;
+        height: 23px;
+        position:relative;
+        margin: 0 auto;
+      }
+    }
+
+    &__subscription {
+      &-form {
+
+      }
+
+      & > div {
+        top: 150px;
+        right: -6.9vw;
+        &:first-child {
+
+        }
+      }
+
+      &-information {
+
+        & div{
+
+        }
+      }
+    }
+
+    &__links {
+      &-links {
+        position: static;
+        margin: 53px  auto 0;
+      &  ul {
+          width: 60vw;
+          display: flex;
+gap:18px;
+        }
+
+
+        & li {
+
+        }
+
+      }
+      &-logo{
+top:21px;
+      }
+    }
+
+    &-button {
+
+    }
+    .button {
+margin-top: 58px;
+    }
+
+    &__navigation {
+width: 98%;
+      right: -8px;
+      top: 168px;
+    }
+
+
+    .network {
+
     }
   }
 }

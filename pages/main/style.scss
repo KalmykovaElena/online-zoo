@@ -70,7 +70,16 @@ footer {
   background-color: #000000;
   padding-top: 41px;
   padding-bottom: 50px;
+  z-index: 50;
   //position: absolute;
+  @media screen and(max-width: 935px){
+    height:44vw;
+    padding: 0;
+  }
+  @media screen and(max-width: 630px){
+    height:540px;
+    padding: 0;
+  }
 }
 .donate {
   background-image: url("../../assets/Giant Panda.jpg");

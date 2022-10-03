@@ -256,41 +256,45 @@
   }
 }
 
-@media screen and(min-width: 1350px) and (max-width: 1599px) {
-  .mainContent{
-  &__backstage {
+@media screen  and (max-width: 1599px) {
+  .mainContent {
+    &__backstage {
 
-    &-flower {
-     right: -1vw;
-    }
+      &-flower {
+        width: 9vw;
+      }
 
-    &-text {
-      h2 {
-        font-size: 3vw;
+      &-text {
+        h2 {
+          font-size: 3vw;
+        }
       }
     }
-  }
 
     &__firstFlower {
       width: 29vw;
       height: 28vw;
     }
+
     &__secondFlower {
       width: 24vw;
       height: 18vw;
     }
-}
+  }
   .mainContent__backstage-text, .mainContent__backstage-text div {
     width: 29vw;
   }
 }
-@media screen  and (max-width: 1349px) {
+
+@media screen and (max-width: 1349px) {
   .mainContent {
     height: 1643px;
+
     &__backstage {
       width: 94vw;
       grid-column-gap: 31px;
       margin: 51px auto 152px;
+
       .image {
         margin-top: 9px;
         width: 45.5vw;
@@ -302,14 +306,22 @@
           left: -81px;
         }
       }
+
       &-flower {
         display: none;
       }
+
       &-text div {
         width: 454px;
       }
     }
+&__slider{
+
+
+
+}
     &__pets {
+      width:100%;
       &-images {
         width: 1000px;
         height: 801px;
@@ -332,11 +344,13 @@
         }
       }
     }
+
     &__slider {
       padding-top: 15px;
       margin-bottom: 30px;
       display: flex;
       justify-content: center;
+
       .arrow {
         position: absolute;
         padding-bottom: 20px;
@@ -354,74 +368,275 @@
     }
   }
 }
-@media screen  and (min-width: 641px) and (max-width: 780px) {
+
+@media screen and (max-width: 1001px) {
   .mainContent {
 
     &__backstage {
+      & .image {
+        height: 403px;
+      }
 
-&-text {
-  width: 370px;
-  h2 {
-    font-size: 28px;
-    line-height: 34.5px;
-  }
-  div{
-    width: 340px;
-  }
-}
+      &-text {
+        width: 370px;
+
+        h2 {
+          font-size: 28px;
+          line-height: 34.5px;
+        }
+
+        div {
+          width: 295px;
+        }
+      }
     }
 
     &__firstFlower {
-      opacity:0;
+      opacity: 0;
     }
-    .small-display{
-      opacity:1;
+
+    .small-display {
+      opacity: 1;
       width: 21vw;
       height: 20vw;
       left: -12px;
 
     }
+
     &__secondFlower {
       width: 24vw;
       height: 18vw;
     }
   }
 }
-@media screen  and (max-width: 640px){
+
+@media screen and (max-width: 940px) {
   .mainContent {
+    height: 1421px;
+    &__firstFlower {
+      opacity: 1;
+      width: 21vw;
+      height: 32vw;
+      left: 4px;
+    }
+    .small-display {
+      opacity: 0;
+    }
+    &__secondFlower {
+      width: 27vw;
+      height: 20vw;
+    }
     &__backstage {
       margin-bottom: 31px;
+
       .image {
         display: none;
       }
-      &-flower{
-        display: block;
-        height: 476px;
-        top: -62px;
-        right: -27px;
-      }
+
+      //&-flower {
+      //  display: block;
+      //  height: 74vw;
+      //  width: 1vw;
+      //  top: -62px;
+      //  right: -27px;
+      //}
+
       &-description {
 
         margin-bottom: 32px;
       }
-      &-title{
+
+      &-title {
         margin-left: 4px;
         margin-bottom: 20px;
       }
-      &-text{
+
+      &-text {
+        h2 {
+          width: 454px;
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 58px;
+
+
+        }
+
         div {
           width: 76vw;
         }
       }
     }
+    &__pets {
+
+      &-images{
+        width:94vw;
+        height: 756px;
+        justify-content: space-between;
+      }
+      &-card:nth-child(5), &-card:nth-child(6) {
+        display: none;
+      }
+      &-card {
+        width: 285px;
+        height: 332px;
+
+        &-photo {
+          width: 285px;
+          height: 285px;
+        }
+        &-info{
+          padding: 3px 12px 14px 13px;
+          img{
+            width:25px;
+            height:28px;
+          }
+        }
+
+      }
+      &__info{
+
+        &-name {
+          font-size: 12px;
+        }
+        &-description {
+          font-size: 12px;
+          margin-top:-7px;
+        }
+      }
+    }
+    &__slider {
+
+
+      &:first-child {
+        top: 28%;
+        left: 38%;
+      }
+
+      &:last-child {
+        top: 28%;
+        right: 35%;
+      }
+
+    }
+    &-button{
+      margin: -47px auto 0;
+    }
+
+  }
+    }
+
+
+
+@media screen and (max-width: 580px) {
+  .mainContent {
+
+    margin-top: 30vw;
+    //height: 1957px;
+    &__firstFlower {
+      opacity: 0;
+      width: 21vw;
+      height: 32vw;
+      left: 4px;
+    }
+    .small-display {
+      opacity: 1;
+      height: 22vw;
+    }
+    &__secondFlower {
+      width: 27vw;
+      height: 20vw;
+      right: -6vw;
+    }
+    &__slider {
+      width: 50%;
+      //height: 1403px;
+      position: relative;
+      left: 10px;
+      top: -10px;
+
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        display: none
+
+      }
+    }
+
+    &__backstage {
+      &-flower {
+        height: 225px;
+        top: -63px;
+        right: -41px;
+      }
+
+      &-description {
+        width: 92vw;
+        margin-bottom: 21px;
+      }
+
+      &-title {
+        margin-bottom: 10px;
+      }
+
+      &-text {
+
+        h2 {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 29px;
+          width: 300px;
+          margin-top: 8px;
+          margin-bottom: 9px;
+        }
+
+        div {
+          width: 92vw;
+          margin-bottom: 21px;
+        }
+
+      }
+
+      &-content {
+        margin-top: -10px;
+      }
+    }
+
+    &__pets {
+      height: 100%;
+      width:56%;
+      margin: 0 auto;
+      &-images{
+        margin: 0 ;
+        justify-content: center;
+      }
+     &-card{
+       margin:0 auto 20px;
+     }
+    }
+
   }
 
+    }
 
+@media screen and(max-width: 553px) {
+  .mainContent {
+    min-height: 1961px;
+    &-button {
+      position: absolute;
+      bottom: 60px;
+      left:10px;
+    }
+    &__pets{
+      &-images{
+        position: relative;
+        left: -10px;
+      }
+    }
+  }
 }
 
-@media screen  and (max-width: 585px){
-
-}
 
 
 
