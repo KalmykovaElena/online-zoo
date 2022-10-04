@@ -2,6 +2,8 @@
 
 .section-testimonials {
   width: 99%;
+
+  //overflow: hidden;
   position: relative;
 }
 
@@ -56,7 +58,7 @@
   &-leaveImage {
     position: absolute;
     bottom: -130px;
-    right: 0;
+    right: -1%;
     z-index: 40;
   }
 }
@@ -94,7 +96,7 @@ input[type=range]::-webkit-slider-thumb {
 
 @media screen and (max-width: 1599px) {
   .testimonials {
-    width: 97vw;
+   max-width: 99%;
 
     padding-top: 100px;
   }

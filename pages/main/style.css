@@ -201,7 +201,7 @@
     margin: 0;
   }
   .watchAnimal__content-text {
-    font-size: 8.6vw;
+    font-size: 85px;
     line-height: 6.5vw;
     top: 14%;
     left: 16%;
@@ -220,6 +220,7 @@
     top: -7.5vw;
   }
   .watchAnimal__content-text {
+    font-size: 8.3vw;
     top: 16%;
   }
   .watchAnimal__content-button {
@@ -234,6 +235,9 @@
   }
   .watchAnimal__content-button {
     margin-top: 9.5vw;
+  }
+  .watchAnimal__content .button {
+    margin-left: calc((100% - 298px) / 2);
   }
 }
 .mainContent {
@@ -454,8 +458,8 @@
     font-size: 3vw;
   }
   .mainContent__firstFlower {
-    width: 29vw;
-    height: 28vw;
+    width: 12%;
+    height: 21%;
   }
   .mainContent__secondFlower {
     width: 24vw;
@@ -465,7 +469,7 @@
     width: 29vw;
   }
 }
-@media screen and (max-width: 1349px) {
+@media screen and (max-width: 1390px) {
   .mainContent {
     height: 1643px;
   }
@@ -491,12 +495,13 @@
     width: 454px;
   }
   .mainContent__pets {
-    width: 100%;
+    width: 94vw;
   }
   .mainContent__pets-images {
-    width: 1000px;
+    width: 100%;
     height: 801px;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 25px;
     align-content: space-between;
     margin: 0 auto;
   }
@@ -538,11 +543,10 @@
     width: 370px;
   }
   .mainContent__backstage-text h2 {
-    font-size: 28px;
-    line-height: 34.5px;
-  }
-  .mainContent__backstage-text div {
-    width: 295px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+    width: 454px;
   }
   .mainContent__firstFlower {
     opacity: 0;
@@ -558,23 +562,36 @@
     height: 18vw;
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 990px) {
   .mainContent {
     height: 1421px;
   }
+}
+@media screen and (max-width: 990px) and (max-width: 606px) {
+  .mainContent {
+    height: 1957px;
+  }
+}
+@media screen and (max-width: 990px) {
   .mainContent__firstFlower {
     opacity: 1;
     width: 21vw;
     height: 32vw;
     left: 4px;
   }
+}
+@media screen and (max-width: 990px) {
   .mainContent .small-display {
     opacity: 0;
   }
+}
+@media screen and (max-width: 990px) {
   .mainContent__secondFlower {
     width: 27vw;
     height: 20vw;
   }
+}
+@media screen and (max-width: 990px) {
   .mainContent__backstage {
     margin-bottom: 31px;
   }
@@ -597,10 +614,13 @@
   .mainContent__backstage-text div {
     width: 76vw;
   }
+}
+@media screen and (max-width: 990px) {
   .mainContent__pets-images {
     width: 94vw;
     height: 756px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 25px;
   }
   .mainContent__pets-card:nth-child(5), .mainContent__pets-card:nth-child(6) {
     display: none;
@@ -627,6 +647,8 @@
     font-size: 12px;
     margin-top: -7px;
   }
+}
+@media screen and (max-width: 990px) {
   .mainContent__slider:first-child {
     top: 28%;
     left: 38%;
@@ -635,11 +657,13 @@
     top: 28%;
     right: 35%;
   }
+}
+@media screen and (max-width: 990px) {
   .mainContent-button {
     margin: -47px auto 0;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 639px) {
   .mainContent {
     margin-top: 30vw;
   }
@@ -670,10 +694,29 @@
   .mainContent__slider:last-child {
     display: none;
   }
+  .mainContent__backstage {
+    margin: 3px auto 27px;
+  }
   .mainContent__backstage-flower {
+    display: block;
     height: 225px;
-    top: -63px;
-    right: -41px;
+    width: 29px;
+    top: -59px;
+    right: 16px;
+  }
+  .mainContent__backstage-flower div {
+    height: 225px;
+    width: 44px;
+    top: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mainContent__backstage-flower img {
+    height: 217px;
+    width: 105px;
+    left: 289px;
+    top: 259px;
+    border-radius: 0px;
   }
   .mainContent__backstage-description {
     width: 92vw;
@@ -705,23 +748,19 @@
   .mainContent__pets-images {
     margin: 0;
     justify-content: center;
+    gap: 0;
   }
   .mainContent__pets-card {
     margin: 0 auto 20px;
   }
-}
-@media screen and (max-width: 553px) {
-  .mainContent {
-    min-height: 1961px;
-  }
   .mainContent-button {
     position: absolute;
     bottom: 60px;
-    left: 10px;
+    left: calc((100% - 298px) / 2);
   }
   .mainContent__pets-images {
     position: relative;
-    left: -10px;
+    left: -2%;
   }
 }
 .pickAndFeed {
@@ -867,10 +906,13 @@
     height: 781px;
   }
   .pickAndFeed__wrapper {
-    width: 628px;
+    max-width: 628px;
     height: 741px;
     margin: 0 auto;
     padding-top: 7px;
+  }
+  .pickAndFeed__wrapper-text {
+    overflow: hidden;
   }
   .pickAndFeed__wrapper-text div:nth-child(2) {
     margin-left: 3%;
@@ -1034,7 +1076,7 @@
 .testimonials-leaveImage {
   position: absolute;
   bottom: -130px;
-  right: 0;
+  right: -1%;
   z-index: 40;
 }
 
@@ -1068,7 +1110,7 @@ input[type=range]::-webkit-slider-thumb {
 
 @media screen and (max-width: 1599px) {
   .testimonials {
-    width: 97vw;
+    max-width: 99%;
     padding-top: 100px;
   }
 }
@@ -1445,7 +1487,6 @@ input {
     position: relative;
   }
   .footer__subscription > div {
-    width: 367px;
     position: absolute;
     top: 42px;
     right: -2.9vw;
@@ -1454,6 +1495,7 @@ input {
     position: relative;
     top: 0;
     right: 150px;
+    white-space: nowrap;
   }
   .footer__subscription-form {
     position: absolute;
@@ -1524,7 +1566,7 @@ input {
     display: none;
   }
 }
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 639px) {
   .footer {
     height: 100%;
     display: block;
@@ -1536,10 +1578,31 @@ input {
     position: relative;
     margin: 0 auto;
   }
+  .footer__links-logo-bamboo {
+    bottom: 6.5px;
+    left: 71.5px;
+  }
   .footer__subscription > div {
-    top: 150px;
+    top: 16%;
     right: -6.9vw;
   }
+}
+@media screen and (max-width: 639px) and (max-width: 515px) {
+  .footer__subscription > div {
+    top: 27%;
+  }
+}
+@media screen and (max-width: 639px) and (max-width: 515px) {
+  .footer__subscription > div {
+    top: 33%;
+  }
+}
+@media screen and (max-width: 639px) and (max-width: 342px) {
+  .footer__subscription > div {
+    top: 44%;
+  }
+}
+@media screen and (max-width: 639px) {
   .footer__links-links {
     position: static;
     margin: 53px auto 0;
@@ -1552,13 +1615,23 @@ input {
   .footer__links-logo {
     top: 21px;
   }
+}
+@media screen and (max-width: 639px) {
   .footer .button {
     margin-top: 58px;
   }
+}
+@media screen and (max-width: 639px) {
   .footer__navigation {
     width: 98%;
     right: -8px;
-    top: 168px;
+    top: 43%;
+  }
+}
+@media screen and (max-width: 639px) and (max-width: 515px) {
+  .footer__navigation {
+    top: 50%;
+    right: -6px;
   }
 }
 .donateLink a {
@@ -1824,6 +1897,9 @@ input {
 
 html {
   font-size: 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -1867,6 +1943,7 @@ body {
 
 footer {
   width: 100%;
+  overflow: hidden;
   height: 443px;
   background-color: #000000;
   padding-top: 41px;
@@ -1881,7 +1958,7 @@ footer {
 }
 @media screen and (max-width: 630px) {
   footer {
-    height: 540px;
+    height: 334px;
     padding: 0;
   }
 }

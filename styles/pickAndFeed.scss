@@ -159,11 +159,13 @@ height: 800px;
     padding-top: 19px;
     height: 781px;
     &__wrapper{
-      width:628px;
+      max-width:628px;
       height: 741px;
       margin: 0 auto;
       padding-top: 7px;
       &-text {
+
+        overflow: hidden;
         & div:nth-child(2){
           margin-left: 3%;
           margin-bottom: 16px;

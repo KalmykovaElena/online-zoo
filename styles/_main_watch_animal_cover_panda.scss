@@ -89,7 +89,7 @@
         margin: 0;
       }
       &-text {
-          font-size: 8.6vw;
+          font-size: 85px;
         line-height: 6.5vw;
         top: 14%;
         left: 16%;
@@ -116,6 +116,7 @@
 
       }
       &-text {
+        font-size: 8.3vw;
         top: 16%;
       }
       &-button{
@@ -143,6 +144,10 @@
         margin-top: 9.5vw;
 
       }
+      .button{
+        margin-left: calc((100% - 298px)/2);
+      }
     }
+
   }
 }

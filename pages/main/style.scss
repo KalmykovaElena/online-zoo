@@ -15,9 +15,14 @@
     color: #FFFFFF;
   }
 }
-
+//*, *:before, *:after {
+//  outline: solid 1px #000;
+//}
 html {
   font-size: 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -66,6 +71,8 @@ body {
 }
 footer {
   width: 100%;
+
+  overflow: hidden;
   height: 443px;
   background-color: #000000;
   padding-top: 41px;
@@ -77,7 +84,7 @@ footer {
     padding: 0;
   }
   @media screen and(max-width: 630px){
-    height:540px;
+    height:334px;
     padding: 0;
   }
 }
@@ -103,6 +110,8 @@ height: 50vw;
 
   .watchAnimal {
     height: 55.4vw;
+    //overflow: hidden;
+    //overflow-x:hidden;
     background-image: url("../../assets/Giant Panda2.png");
     background-size: cover;
     background-position: 0 -2.6vw;

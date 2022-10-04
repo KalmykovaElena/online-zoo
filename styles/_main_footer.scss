@@ -205,7 +205,7 @@ letter-spacing: 1.5px;
 position: relative;
     &__subscription {
 & >div{
-  width:367px;
+
   position: absolute;
   top: 42px;
   right: -2.9vw;
@@ -213,6 +213,7 @@ position: relative;
     position: relative;
     top:0;
     right:150px;
+    white-space: nowrap
   }
 }
      &-form {
@@ -318,7 +319,7 @@ position: absolute;
   }
 }
 
-@media screen and(max-width: 630px) {
+@media screen and(max-width: 639px) {
   .footer {
 height: 100%;
 display: block;
@@ -330,6 +331,10 @@ border:none;
         height: 23px;
         position:relative;
         margin: 0 auto;
+        &-bamboo{
+          bottom: 6.5px;
+          left: 71.5px;
+        }
       }
     }
 
@@ -339,8 +344,15 @@ border:none;
       }
 
       & > div {
-        top: 150px;
+        top: 16%;
         right: -6.9vw;
+        @media screen and(max-width: 515px){
+          top:27%;
+        }@media screen and(max-width: 515px){
+          top:33%;
+        }@media screen and(max-width: 342px){
+          top:44%;
+        }
         &:first-child {
 
         }
@@ -385,7 +397,11 @@ margin-top: 58px;
     &__navigation {
 width: 98%;
       right: -8px;
-      top: 168px;
+      top: 43%;
+      @media screen and(max-width: 515px){
+        top:50%;
+        right: -6px;
+      }
     }
 
 
