@@ -270,6 +270,9 @@ div{
 @media screen and (max-width: 1599px) {
   .donateDesktop {
     height: 1335px;
+    @media screen and (max-width: 380px){
+      height:1146px ;
+    }
     &__content {
       width: 94vw;
       margin: 0 auto 30px;
@@ -451,7 +454,10 @@ left:-25px;
   left: 15vw;
 }
             &-button{
-              margin: -30px 336px 30px -18.75vw
+              margin: -30px 336px 30px -18.75vw;
+              @media screen and (max-width: 440px){
+                margin-left:-33.75vw;
+              }
             }
           }
         }
@@ -483,8 +489,15 @@ left:-25px;
           &-text{
             font-size: 16px;
             line-height: 22.4px;
-            right: 77.5%;
+            right: 94px;
             bottom: 3.5%;
+          }
+        }
+        &-images {
+           margin-bottom: 0;
+
+          @media screen and (max-width: 380px){
+            height: 71px;
           }
         }
         &-images :nth-child(3) {
@@ -512,15 +525,62 @@ left:-25px;
         &-images :last-child {
           top: 16px;
           left: -92px;
-          font-size: 9px;
+
           width: 89.66px;
-        }
-        .chooseSize ul{
-          height:16px;
-          input[type=radio]{
-            top:-1px;
+          @media screen and (max-width: 380px){
+            font-size: 9px;
           }
         }
+        .chooseSize {
+          margin:0;
+          ul {
+            height: 16px;
+            margin-bottom: 49px;
+            input[type=radio] {
+              top: -1px;
+            }
+          }
+          label {
+            font-size: 13px;
+            left: -9px;
+            bottom: 5px;
+          }
+        }
+        &-amount {
+
+          div:first-child {
+
+            position: relative;
+            left: -91px;
+            bottom: 6px;
+          }
+
+        }
+        .changeSum {
+          .anotherAmount {
+            width: 158px;
+            height: 24px;
+            position: relative;
+            left:3.4vw;
+padding-top: 6px;
+          }
+          &-label{
+            left:40%;
+          }
+          div{
+            width: 227px;
+            margin-left: -1vw;
+            justify-content: start;
+          }
+          &-button{
+            top:-19px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      &-final-text {
+left:-92px;
+        width: 94vw;
       }
     }
   }
