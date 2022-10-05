@@ -11,7 +11,7 @@ padding-top: 38px;
 }
 .donateDesktop__content{
   width:1160px;
-  margin:  0 223px 180px 220px;
+  margin:  0 auto 180px;
   .heading{
     color:#ffffff;
     font-size: 36px;
@@ -264,5 +264,264 @@ div{
 }
  button{
     margin-top: -30px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .donateDesktop {
+    height: 1335px;
+    &__content {
+      width: 94vw;
+      margin: 0 auto 30px;
+
+      .heading {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 47px;
+        margin-bottom: 32px;
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-text {
+        height: 94px;
+        width: 93.8vw;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+
+        font-family: Roboto;
+
+
+      }
+
+      &-info {
+        margin-bottom: 40px;
+      }
+
+      &__wrapperFeed {
+        height: 915px;
+        &-images {
+          margin-bottom: -14px;
+           :nth-child(2){
+             top: 71px;
+             left: 52%;
+           }
+           :nth-child(3) {
+position: relative;
+             top: -58px;
+             left: 11vw;
+          }
+          :first-child{
+            top: 43px;
+            left: 27%;
+          }
+  :last-child {
+    top: 114px;
+    left: 104px;
+          }
+        }
+        .chooseSize ul {
+
+          width: 81vw;
+
+left:-25px;
+          margin-bottom: 92px;
+        }
+        .changeSum {
+          position: relative;
+          left: 307px;
+          width: 270px;
+
+          .anotherAmount {
+            margin: -1px 0 0 -61px;
+          }
+      div {
+            margin-left: -86px;
+            width: 246px;
+          }
+          &-label {
+            top: 22px;
+            right: 77px;
+          }
+        }
+      }
+      &-final-text {
+        left: 229px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 885px){
+  .donateDesktop{
+    padding-top: 30px;
+
+      &__content {
+
+
+        .heading {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 29px;
+          color: #FE9013;
+
+                 margin-bottom: 18px;
+
+        }
+        &-text{
+          margin-bottom: 90px;
+        }
+        &-info{
+          margin-bottom: 30px;
+        }
+        &__wrapperFeed{
+          .heading{
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 58px;
+            width: 73vw;
+            position: relative;
+            bottom:1.5%;
+            right:6.2%;
+          }
+          .heading-text{
+            width:94vw;
+            text-align: center;
+            position: relative;
+            right: 22.2%;
+            bottom: 1%;
+          }
+          &-images {
+            :nth-child(3) {
+              top: -18px;
+              left: 28vw;
+            }
+            :first-child {
+              top: 87px;
+              left: -14%;
+            }
+            :last-child {
+              top: 157px;
+              left: -64px;
+            }
+            :nth-child(2) {
+              top: 112px;
+              left: 56%;
+            }
+
+              margin-bottom: 10px;
+
+          }
+          .chooseSize ul {
+            margin-bottom: 100px;
+            width: 93.75vw;
+            left: -91px;
+            li:nth-child(1),li:nth-child(2),li:nth-child(3){
+              display: none;
+            }
+            li:after {
+              width: 76vw;
+              left: 6.75vw;
+
+              @media screen and (max-width:470px){
+                width: 78vw;
+                left: 4.75vw;
+              }
+
+
+            }
+          }
+          .changeSum {
+            .anotherAmount {
+              width:25vw;
+              height: 27px;
+              padding-top:0;
+            }
+            left: calc((100vw - 281px)/2);
+            div {
+              margin-left: -17vw;
+              width: 227px;
+            }
+&-label{
+  top: 7px;
+  left: 15vw;
+}
+            &-button{
+              margin: -30px 336px 30px -18.75vw
+            }
+          }
+        }
+       &-final-text {
+         left: 8.75vw;
+       }
+        }
+      }
+  }
+@media screen and (max-width: 580px) {
+  .donateDesktop {
+
+    &__content {
+      &-text{
+        margin-bottom: 238px;
+      }
+      &-info{
+        font-size:24px;
+        margin-bottom: 20px;
+      }
+      &__wrapperFeed {
+        .heading {
+          font-size: 24px;
+          line-height: 28.8px;
+          width: 72.5vw;
+          position: relative;
+          bottom: 2.5%;
+          right: 49.2%;
+          &-text{
+            font-size: 16px;
+            line-height: 22.4px;
+            right: 77.5%;
+            bottom: 3.5%;
+          }
+        }
+        &-images :nth-child(3) {
+          height: 43.3vw;
+          width: 50vw;
+          left: 15vw;
+          top: -77px;
+
+
+        }
+        &-images :first-child {
+
+          height: 32.7px;
+          width: 46.2px;
+          left: -71px;
+          top: -18px;
+
+        }
+        &-images :nth-child(2) {
+          height: 2.5vw;
+          width: 2.5vw;
+          top: -6px;
+          left: 4px;
+        }
+        &-images :last-child {
+          top: 16px;
+          left: -92px;
+          font-size: 9px;
+          width: 89.66px;
+        }
+        .chooseSize ul{
+          height:16px;
+          input[type=radio]{
+            top:-1px;
+          }
+        }
+      }
+    }
   }
 }
