@@ -167,18 +167,18 @@ height: 800px;
 
         overflow: hidden;
         & div:nth-child(2){
-          margin-left: 3%;
+          margin-left: 0;
           margin-bottom: 16px;
           font-size: 22px;
         }
         & div:nth-child(3){
           width:600px;
-          margin-left: 3%;
+          margin-left: 0;
 
         }
         & div:nth-child(4){
           width:600px;
-          margin-left: 3%;
+          margin-left: 0;
 
         }
         h2 {
@@ -191,7 +191,7 @@ height: 800px;
       }
       &-images{
         position: relative;
-        margin: -20px 0 0 20px;
+        margin: -20px 0 0 0;
         &-row {
           display: none;
         }

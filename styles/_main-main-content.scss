@@ -308,7 +308,7 @@
       }
 
       &-flower {
-        display: none;
+       display: none;
       }
 
       &-text div {
@@ -437,13 +437,17 @@ height: 1957px;
         display: none;
       }
 
-      //&-flower {
-      //  display: block;
-      //  height: 74vw;
-      //  width: 1vw;
-      //  top: -62px;
-      //  right: -27px;
-      //}
+      &-flower {
+        display: block;
+        width: 26vw;
+        top: -4%;
+        overflow: hidden;
+         margin-right: -6vw;
+
+        img{
+          height: 468px;
+        }
+      }
 
       &-description {
 
@@ -574,11 +578,15 @@ height: 1957px;
       margin: 3px auto 27px;
 
       &-flower {
-        display: block;
-        height: 225px;
-        width: 29px;
-        top: -59px;
-        right: 16px;
+        height: 234px;
+        width: 15.5vw;
+        top: -18vw;
+        right: 0;
+        @media screen and (max-width: 325px){
+          right: 13px;
+        }
+
+
      div {
         height: 225px;
        width: 44px;

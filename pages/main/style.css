@@ -598,6 +598,16 @@
   .mainContent__backstage .image {
     display: none;
   }
+  .mainContent__backstage-flower {
+    display: block;
+    width: 26vw;
+    top: -4%;
+    overflow: hidden;
+    margin-right: -6vw;
+  }
+  .mainContent__backstage-flower img {
+    height: 468px;
+  }
   .mainContent__backstage-description {
     margin-bottom: 32px;
   }
@@ -698,12 +708,18 @@
     margin: 3px auto 27px;
   }
   .mainContent__backstage-flower {
-    display: block;
-    height: 225px;
-    width: 29px;
-    top: -59px;
-    right: 16px;
+    height: 234px;
+    width: 15.5vw;
+    top: -18vw;
+    right: 0;
   }
+}
+@media screen and (max-width: 639px) and (max-width: 325px) {
+  .mainContent__backstage-flower {
+    right: 13px;
+  }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage-flower div {
     height: 225px;
     width: 44px;
@@ -711,6 +727,8 @@
     position: relative;
     overflow: hidden;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage-flower img {
     height: 217px;
     width: 105px;
@@ -718,13 +736,19 @@
     top: 259px;
     border-radius: 0px;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage-description {
     width: 92vw;
     margin-bottom: 21px;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage-title {
     margin-bottom: 10px;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage-text h2 {
     font-size: 24px;
     font-weight: 400;
@@ -737,9 +761,13 @@
     width: 92vw;
     margin-bottom: 21px;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage-content {
     margin-top: -10px;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__pets {
     height: 100%;
     width: 56%;
@@ -753,11 +781,15 @@
   .mainContent__pets-card {
     margin: 0 auto 20px;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent-button {
     position: absolute;
     bottom: 60px;
     left: calc((100% - 298px) / 2);
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__pets-images {
     position: relative;
     left: -2%;
@@ -915,17 +947,17 @@
     overflow: hidden;
   }
   .pickAndFeed__wrapper-text div:nth-child(2) {
-    margin-left: 3%;
+    margin-left: 0;
     margin-bottom: 16px;
     font-size: 22px;
   }
   .pickAndFeed__wrapper-text div:nth-child(3) {
     width: 600px;
-    margin-left: 3%;
+    margin-left: 0;
   }
   .pickAndFeed__wrapper-text div:nth-child(4) {
     width: 600px;
-    margin-left: 3%;
+    margin-left: 0;
   }
   .pickAndFeed__wrapper-text h2 {
     font-size: 42px;
@@ -936,7 +968,7 @@
   }
   .pickAndFeed__wrapper-images {
     position: relative;
-    margin: -20px 0 0 20px;
+    margin: -20px 0 0 0;
     width: 588px;
     display: flex;
     justify-content: space-between;
@@ -1900,8 +1932,8 @@ input {
     margin: 0 auto 30px;
   }
   .donateDesktop__content .heading {
-    color: #ffffff;
-    font-size: 36px;
+    color: #FE9013;
+    font-size: 48px;
     font-weight: 400;
     line-height: 47px;
     margin-bottom: 32px;
@@ -1910,13 +1942,10 @@ input {
     display: flex;
     justify-content: center;
   }
-  .donateDesktop__content-text {
-    height: 94px;
-    width: 93.8vw;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: Roboto;
+  .donateDesktop__content .heading-text {
+    margin-bottom: 89px;
+    margin-left: -43px;
+    width: 112%;
   }
   .donateDesktop__content-info {
     margin-bottom: 40px;

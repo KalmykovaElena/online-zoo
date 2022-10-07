@@ -278,27 +278,24 @@ div{
       margin: 0 auto 30px;
 
       .heading {
-        color: #ffffff;
-        font-size: 36px;
+        color:#FE9013;
+        font-size: 48px;
         font-weight: 400;
         line-height: 47px;
         margin-bottom: 32px;
+
         margin-left: 0;
         width: 100%;
         display: flex;
         justify-content: center;
-      }
+
 
       &-text {
-        height: 94px;
-        width: 93.8vw;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
+        margin-bottom: 89px;
+        margin-left: -43px;
+        width: 112%;
 
-        font-family: Roboto;
-
-
+      }
       }
 
       &-info {
