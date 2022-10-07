@@ -117,6 +117,13 @@
     bottom: -0.5px;
     left: 4.5px;
   }
+  .burger-overlay {
+    width: 110vw;
+    height: 110vh;
+    position: absolute;
+    background-color: #000000;
+    opacity: 0;
+  }
   .burger-list {
     position: absolute;
     width: 100vw;
@@ -134,7 +141,6 @@
     cursor: pointer;
   }
   .burger-list li {
-    color: #FE9013;
     max-width: 105px;
     margin-bottom: 15px;
   }
@@ -144,17 +150,21 @@
     font-weight: 400;
     line-height: 22px;
   }
+  .burger-list li a span {
+    color: #FE9013;
+  }
   .burger-list .header__logo {
     border: 1px solid #FE9013;
     height: 41.6px;
     width: 65.6px;
     position: relative;
     margin-bottom: 30px;
+    padding-top: 0;
   }
   .burger-list .header__logo-bamboo {
     position: absolute;
-    bottom: 10px;
-    left: 13px;
+    bottom: 3px;
+    left: 8px;
   }
 }
 @media screen and (max-width: 550px) {
