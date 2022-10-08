@@ -348,15 +348,25 @@
 .mainContent__slider:last-child {
   margin: 396px 20px auto;
 }
-.mainContent__pets {
+.mainContent #container {
   width: 1160px;
+  overflow: hidden;
+}
+.mainContent__pets {
+  width: 3500px;
+  height: 902px;
   margin: 0 auto 78px;
   position: relative;
+  display: flex;
+  overflow: hidden;
+  left: -1158px;
 }
 .mainContent__pets-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 1158px;
+  position: relative;
 }
 .mainContent__pets-card {
   width: 366px;
@@ -499,6 +509,32 @@
   background: #E47209;
 }
 
+@keyframes move-right {
+  from {
+    left: -1158px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1158px;
+  }
+  to {
+    left: -2316px;
+  }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+}
+
 @media screen and (max-width: 1599px) {
   .mainContent__backstage-flower {
     width: 9vw;
@@ -544,8 +580,32 @@
     width: 454px;
   }
   .mainContent__pets {
-    width: 94vw;
+    width: 294vw;
+    left: -98vw;
   }
+}
+@media screen and (max-width: 1390px) and (max-width: 1000px) {
+  .mainContent__pets {
+    left: -96vw;
+  }
+  @keyframes move-right {
+    from {
+      left: -96vw;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -96vw;
+    }
+    to {
+      left: -196vw;
+    }
+  }
+}
+@media screen and (max-width: 1390px) {
   .mainContent__pets-images {
     width: 100%;
     height: 801px;
@@ -554,6 +614,8 @@
     align-content: space-between;
     margin: 0 auto;
   }
+}
+@media screen and (max-width: 1390px) {
   .mainContent__pets-card {
     width: 294px;
     height: 354px;
@@ -565,6 +627,8 @@
   .mainContent__pets-card-photo {
     height: 294px;
   }
+}
+@media screen and (max-width: 1390px) {
   .mainContent__slider {
     padding-top: 15px;
     margin-bottom: 30px;
@@ -574,6 +638,7 @@
   .mainContent__slider .arrow {
     position: absolute;
     padding-bottom: 20px;
+    z-index: 2000;
   }
   .mainContent__slider:first-child {
     top: 33%;
