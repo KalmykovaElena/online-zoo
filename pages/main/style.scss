@@ -32,12 +32,13 @@ header {
   padding-top: 14px;
   position: absolute;
   .burger-list{
-    opacity: 0;
+    display: none;
     transition: .5s;
-
+    height: 10px;
   }
   .burger-open{
-    opacity: 1;
+  display: block;
+    height: 390px;
   }
 
 }
@@ -108,6 +109,25 @@ height: 373px;
     background-position: -344px 3.1vw;
   }
 }
+.modal-overlay{
+  position: fixed;
+  border:none;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5000;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  background-color: black;
+}
+.opened{
+  opacity:0.4;
+}
 @media screen and (max-width: 1599px) {
   header {
     position: relative;
@@ -120,7 +140,12 @@ height: 50vw;
   }
 }
 @media screen and (max-width: 1000px) {
-
+  header {
+    height: 34px;
+    padding: 0;
+    position: fixed;
+    z-index: 500;
+  }
   .watchAnimal {
     height: 55.4vw;
     //overflow: hidden;
@@ -138,12 +163,7 @@ height: 50vw;
   }
 }
 @media screen and (max-width: 780px) {
-  header {
-    height: 34px;
-    padding: 0;
-    position: fixed;
-    z-index: 500;
-  }
+
   .watchAnimal {
     height: 59.2vw;
     background-image: url("../../assets/Giant Panda3.png");

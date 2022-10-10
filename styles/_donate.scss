@@ -373,7 +373,7 @@ left:-25px;
 
         }
         &-text{
-          margin-bottom: 90px;
+          margin-bottom: 0;
         }
         &-info{
           margin-bottom: 30px;
@@ -387,12 +387,13 @@ left:-25px;
             position: relative;
             bottom:1.5%;
             right:6.2%;
+            text-align: center;
           }
           .heading-text{
             width:94vw;
             text-align: center;
             position: relative;
-            right: 22.2%;
+            right: 7.2%;
             bottom: 1%;
           }
           &-images {
@@ -427,9 +428,13 @@ left:-25px;
               width: 76vw;
               left: 6.75vw;
 
+              @media screen and (max-width:580px){
+                width: 75vw;
+                left: 8.75vw;
+              }
               @media screen and (max-width:470px){
-                width: 78vw;
-                left: 4.75vw;
+                width: 76vw;
+
               }
 
 
@@ -469,7 +474,7 @@ left:-25px;
 
     &__content {
       &-text{
-        margin-bottom: 238px;
+        margin-bottom: 16vw;
       }
       &-info{
         font-size:24px;
@@ -482,12 +487,22 @@ left:-25px;
           width: 72.5vw;
           position: relative;
           bottom: 2.5%;
-          right: 49.2%;
+          @media screen and (max-width: 440px){
+
+            width: 56.5vw;
+
+          }
+
           &-text{
             font-size: 16px;
             line-height: 22.4px;
-            right: 94px;
             bottom: 3.5%;
+            width: 83vw;
+            @media screen and (max-width: 350px){
+
+              margin-bottom: 40px;
+
+            }
           }
         }
         &-images {

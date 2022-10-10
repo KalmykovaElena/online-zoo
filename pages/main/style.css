@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: none;
+  overflow: hidden;
   transition: 0.3s;
 }
 .header .burger-menu > div {
@@ -85,15 +85,6 @@
     position: relative;
   }
   .header {
-    min-width: 94%;
-    margin: 0 30px;
-  }
-  .header__navigation {
-    width: 85%;
-  }
-}
-@media screen and (max-width: 780px) {
-  .header {
     display: flex;
     justify-content: space-between;
   }
@@ -117,54 +108,19 @@
     bottom: -0.5px;
     left: 4.5px;
   }
+  .burger-menu {
+    position: relative;
+  }
   .burger-overlay {
     width: 110vw;
     height: 110vh;
     position: absolute;
     background-color: #000000;
-    opacity: 0;
+    opacity: 0.4;
+    display: none;
   }
-  .burger-list {
-    position: absolute;
-    width: 100vw;
-    height: 390px;
-    top: 0;
-    background-color: #ffffff;
-    padding: 10px;
-  }
-  .burger-list .burger-close {
-    position: absolute;
-    top: 0;
-    right: 13px;
-  }
-  .burger-list .burger-close:hover {
-    cursor: pointer;
-  }
-  .burger-list li {
-    max-width: 105px;
-    margin-bottom: 15px;
-  }
-  .burger-list li a {
-    color: #333B41;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-  }
-  .burger-list li a span {
-    color: #FE9013;
-  }
-  .burger-list .header__logo {
-    border: 1px solid #FE9013;
-    height: 41.6px;
-    width: 65.6px;
-    position: relative;
-    margin-bottom: 30px;
-    padding-top: 0;
-  }
-  .burger-list .header__logo-bamboo {
-    position: absolute;
-    bottom: 3px;
-    left: 8px;
+  .overlay-open {
+    display: block;
   }
 }
 @media screen and (max-width: 550px) {
@@ -173,6 +129,48 @@
     padding: 0 10px;
   }
 }
+.burger-list {
+  position: absolute;
+  width: 100vw;
+  height: 390px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.burger-list .burger-close {
+  position: absolute;
+  top: 0;
+  right: 13px;
+}
+.burger-list .burger-close:hover {
+  cursor: pointer;
+}
+.burger-list li {
+  max-width: 105px;
+  margin-bottom: 15px;
+}
+.burger-list li a {
+  color: #333B41;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.burger-list li a span {
+  color: #FE9013;
+}
+.burger-list .header__logo {
+  border: 1px solid #FE9013;
+  height: 41.6px;
+  width: 65.6px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 0;
+}
+.burger-list .header__logo-bamboo {
+  position: absolute;
+  bottom: 3px;
+  left: 8px;
+}
+
 .watchAnimal__content {
   width: 1160px;
   margin: 0 auto;
@@ -807,17 +805,39 @@
     right: -6vw;
   }
   .mainContent__slider {
-    width: 50%;
+    height: 1388px;
     position: relative;
     left: 10px;
     top: -10px;
   }
+  .mainContent__slider #container {
+    width: 94vw;
+    display: flex;
+    justify-content: center;
+  }
+  .mainContent__slider:first-child {
+    height: 64px;
+    top: -3%;
+  }
+}
+@media screen and (max-width: 639px) and (max-width: 606px) {
   .mainContent__slider:first-child {
     display: none;
   }
+}
+@media screen and (max-width: 639px) {
+  .mainContent__slider:last-child {
+    height: 64px;
+    top: -3%;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 639px) and (max-width: 606px) {
   .mainContent__slider:last-child {
     display: none;
   }
+}
+@media screen and (max-width: 639px) {
   .mainContent__backstage {
     margin: 3px auto 27px;
   }
@@ -884,13 +904,20 @@
 @media screen and (max-width: 639px) {
   .mainContent__pets {
     height: 100%;
-    width: 56%;
+    width: auto;
     margin: 0 auto;
+    left: auto;
   }
   .mainContent__pets-images {
     margin: 0;
     justify-content: center;
     gap: 0;
+  }
+  .mainContent__pets-images:first-child {
+    display: none;
+  }
+  .mainContent__pets-images:last-child {
+    display: none;
   }
   .mainContent__pets-card {
     margin: 0 auto 20px;
@@ -1179,6 +1206,27 @@
   width: 99%;
   position: relative;
 }
+.section-testimonials .modal-window {
+  position: fixed;
+  top: 16%;
+  left: calc((100vw - 263px) / 2);
+  z-index: 5500;
+  opacity: 0;
+  transition: 0.5s;
+}
+.section-testimonials .modal-window-close {
+  text-align: right;
+}
+.section-testimonials .modal-window .wrapper__post-board {
+  width: 267px;
+}
+.section-testimonials .modal-window .wrapper__post-content {
+  height: auto;
+}
+.section-testimonials .modal-window .wrapper__post-text {
+  width: auto;
+  height: auto;
+}
 
 .testimonials {
   height: 911px;
@@ -1197,9 +1245,14 @@
   text-align: center;
   margin-bottom: 47px;
 }
+.testimonials__wrapper .cards-container {
+  width: 1160px;
+  overflow: hidden;
+}
 .testimonials__wrapper__cards {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 .testimonials__wrapper__cards .wrapper__post {
   width: 600px;
@@ -1254,6 +1307,84 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
+.wrapper__post {
+  margin: 0 auto;
+}
+.wrapper__post-board {
+  width: 600px;
+  background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(0deg, #F5F7F6, #F5F7F6);
+  padding: 2px;
+  border-radius: 20px;
+}
+.wrapper__post-content {
+  background-color: #F5F7F6;
+  border-radius: 20px;
+  height: 105px;
+}
+.wrapper__post-info {
+  display: grid;
+  grid-template-areas: "area1 area2 area2" "area1 area3 area4";
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  grid-template-columns: 37px 86px 41px;
+  grid-template-rows: repeat(2, 19px);
+}
+.wrapper__post-info .avatar {
+  grid-area: area1;
+  padding: 13px 0 0 10px;
+}
+.wrapper__post-info .avatar img {
+  width: 37px;
+  height: 37px;
+}
+.wrapper__post-info .name {
+  grid-area: area2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  padding-top: 13px;
+}
+.wrapper__post-info .country {
+  grid-area: area3;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  position: relative;
+  bottom: -5px;
+}
+.wrapper__post-info .country::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -9px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #BDBDBD;
+  transform: translateY(-50%);
+}
+.wrapper__post-info .date {
+  grid-area: area4;
+  color: #BDBDBD;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  position: relative;
+  bottom: -5px;
+  left: -6px;
+}
+.wrapper__post-text {
+  width: 553px;
+  height: 38px;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  margin-top: 13px;
+  margin-left: 16px;
+}
+
 @media screen and (max-width: 1599px) {
   .testimonials {
     max-width: 99%;
@@ -1270,24 +1401,43 @@ input[type=range]::-webkit-slider-thumb {
   .testimonials__wrapper h2 {
     margin-bottom: 30px;
   }
+  .testimonials__wrapper .cards-container {
+    width: 940px;
+  }
+}
+@media screen and (max-width: 1250px) and (max-width: 780px) {
+  .testimonials__wrapper .cards-container {
+    width: 94vw;
+  }
+}
+@media screen and (max-width: 1250px) {
   .testimonials__wrapper__cards img {
     width: 293px;
     height: 391px;
+    flex-shrink: 0;
   }
   .testimonials__wrapper__cards .last {
     display: none;
   }
+}
+@media screen and (max-width: 1250px) {
   .testimonials__wrapper-progress input[type=range] {
     width: 390px;
     height: 8px;
   }
+}
+@media screen and (max-width: 1250px) {
   .testimonials__wrapper-button {
     margin: 27px 0 0 1px;
     border-radius: 5px;
   }
+}
+@media screen and (max-width: 1250px) {
   .testimonials__wrapper .button {
     padding: 2px 0 0 7px;
   }
+}
+@media screen and (max-width: 1250px) {
   .testimonials-leaveImage {
     height: 311px;
     width: 193px;
@@ -1298,9 +1448,13 @@ input[type=range]::-webkit-slider-thumb {
 @media screen and (max-width: 999px) {
   .testimonials {
     height: 668px;
+    padding-left: 20px;
   }
   .testimonials__wrapper {
-    width: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .testimonials__wrapper h2 {
     margin-top: -41px;
@@ -1309,86 +1463,11 @@ input[type=range]::-webkit-slider-thumb {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    z-index: 3000;
   }
   .testimonials__wrapper__cards .table {
     display: none;
-  }
-  .testimonials__wrapper__cards .wrapper__post {
-    margin: 0 auto;
-  }
-  .testimonials__wrapper__cards .wrapper__post-board {
-    width: 600px;
-    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(0deg, #F5F7F6, #F5F7F6);
-    padding: 2px;
-    border-radius: 20px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-content {
-    background-color: #F5F7F6;
-    border-radius: 20px;
-    height: 105px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-info {
-    display: grid;
-    grid-template-areas: "area1 area2 area2" "area1 area3 area4";
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    grid-template-columns: 37px 86px 41px;
-    grid-template-rows: repeat(2, 19px);
-  }
-  .testimonials__wrapper__cards .wrapper__post-info .avatar {
-    grid-area: area1;
-    padding: 13px 0 0 10px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-info .avatar img {
-    width: 37px;
-    height: 37px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-info .name {
-    grid-area: area2;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    padding-top: 13px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-info .country {
-    grid-area: area3;
-    color: #BDBDBD;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-    position: relative;
-    bottom: -5px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-info .country::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -9px;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background-color: #BDBDBD;
-    transform: translateY(-50%);
-  }
-  .testimonials__wrapper__cards .wrapper__post-info .date {
-    grid-area: area4;
-    color: #BDBDBD;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-    position: relative;
-    bottom: -5px;
-    left: -6px;
-  }
-  .testimonials__wrapper__cards .wrapper__post-text {
-    width: 553px;
-    height: 38px;
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-    margin-top: 13px;
-    margin-left: 16px;
+    z-index: 2;
   }
   .testimonials__wrapper .mobile {
     display: block;
@@ -1401,7 +1480,6 @@ input[type=range]::-webkit-slider-thumb {
     margin: 0 auto;
     position: relative;
     top: 42px;
-    right: -31.25vw;
     letter-spacing: -1.2px;
     padding: 2px 0 0 0;
   }
@@ -1415,7 +1493,7 @@ input[type=range]::-webkit-slider-thumb {
 @media screen and (max-width: 639px) {
   .testimonials {
     height: 580px;
-    padding: 0 10px 0 11px;
+    padding: 0 10px 0 41px;
   }
   .testimonials__wrapper {
     display: flex;
@@ -1428,9 +1506,6 @@ input[type=range]::-webkit-slider-thumb {
     font-weight: 400;
     line-height: 29px;
     margin: 30px auto 20px;
-  }
-  .testimonials__wrapper__cards {
-    width: 91vw;
   }
   .testimonials__wrapper__cards .wrapper__post-board {
     width: 93vw;
@@ -2124,7 +2199,7 @@ input {
     margin-bottom: 18px;
   }
   .donateDesktop__content-text {
-    margin-bottom: 90px;
+    margin-bottom: 0;
   }
   .donateDesktop__content-info {
     margin-bottom: 30px;
@@ -2137,12 +2212,13 @@ input {
     position: relative;
     bottom: 1.5%;
     right: 6.2%;
+    text-align: center;
   }
   .donateDesktop__content__wrapperFeed .heading-text {
     width: 94vw;
     text-align: center;
     position: relative;
-    right: 22.2%;
+    right: 7.2%;
     bottom: 1%;
   }
   .donateDesktop__content__wrapperFeed-images {
@@ -2177,10 +2253,15 @@ input {
     left: 6.75vw;
   }
 }
+@media screen and (max-width: 885px) and (max-width: 580px) {
+  .donateDesktop__content__wrapperFeed .chooseSize ul li:after {
+    width: 75vw;
+    left: 8.75vw;
+  }
+}
 @media screen and (max-width: 885px) and (max-width: 470px) {
   .donateDesktop__content__wrapperFeed .chooseSize ul li:after {
-    width: 78vw;
-    left: 4.75vw;
+    width: 76vw;
   }
 }
 @media screen and (max-width: 885px) {
@@ -2216,7 +2297,7 @@ input {
 }
 @media screen and (max-width: 580px) {
   .donateDesktop__content-text {
-    margin-bottom: 238px;
+    margin-bottom: 16vw;
   }
   .donateDesktop__content-info {
     font-size: 24px;
@@ -2228,14 +2309,27 @@ input {
     width: 72.5vw;
     position: relative;
     bottom: 2.5%;
-    right: 49.2%;
   }
+}
+@media screen and (max-width: 580px) and (max-width: 440px) {
+  .donateDesktop__content__wrapperFeed .heading {
+    width: 56.5vw;
+  }
+}
+@media screen and (max-width: 580px) {
   .donateDesktop__content__wrapperFeed .heading-text {
     font-size: 16px;
     line-height: 22.4px;
-    right: 94px;
     bottom: 3.5%;
+    width: 83vw;
   }
+}
+@media screen and (max-width: 580px) and (max-width: 350px) {
+  .donateDesktop__content__wrapperFeed .heading-text {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 580px) {
   .donateDesktop__content__wrapperFeed-images {
     margin-bottom: 0;
   }
@@ -2358,11 +2452,13 @@ header {
   position: absolute;
 }
 header .burger-list {
-  opacity: 0;
+  display: none;
   transition: 0.5s;
+  height: 10px;
 }
 header .burger-open {
-  opacity: 1;
+  display: block;
+  height: 390px;
 }
 
 body {
@@ -2432,6 +2528,27 @@ footer {
   }
 }
 
+.modal-overlay {
+  position: fixed;
+  border: none;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5000;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  background-color: black;
+}
+
+.opened {
+  opacity: 0.4;
+}
+
 @media screen and (max-width: 1599px) {
   header {
     position: relative;
@@ -2443,6 +2560,12 @@ footer {
   }
 }
 @media screen and (max-width: 1000px) {
+  header {
+    height: 34px;
+    padding: 0;
+    position: fixed;
+    z-index: 500;
+  }
   .watchAnimal {
     height: 55.4vw;
     background-image: url("../../assets/Giant Panda2.png");
@@ -2456,12 +2579,6 @@ footer {
   }
 }
 @media screen and (max-width: 780px) {
-  header {
-    height: 34px;
-    padding: 0;
-    position: fixed;
-    z-index: 500;
-  }
   .watchAnimal {
     height: 59.2vw;
     background-image: url("../../assets/Giant Panda3.png");

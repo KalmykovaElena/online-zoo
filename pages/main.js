@@ -1,3 +1,65 @@
+const animals = [
+    {name: 'GIANT PANDAS',
+        location: 'Native to Southwest China',
+        image: '../../assets/pets/pandas.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'EAGLES',
+        location: 'Native to South America',
+        image: '../../assets/pets/eagle.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'GORILLAS',
+        location: 'Native to Congo',
+        image: '../../assets/pets/gorilla.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'TWO-TOED SLOTH',
+        location: 'Mesoamerica, South America',
+        image: '../../assets/pets/sloth.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'CHEETAHS',
+        location: 'Native to Africa',
+        image: '../../assets/pets/cheetahs.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'PENGUINS',
+        location: 'Native to Antarctica',
+        image: '../../assets/pets/pinguin.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'FOX',
+        location: 'all of Europe',
+        image: '../../assets/pets/fox.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'PRZEWALSKI HORSE',
+        location: 'western Mongolia',
+        image: '../../assets/pets/horse_prj.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'HYENA',
+        location: 'Native to Africa',
+        image: '../../assets/pets/hyena.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'JERBOA',
+        location: 'Asia west',
+        image: '../../assets/pets/jerboa.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'KENGURU',
+        location: 'Native to Australia',
+        image: '../../assets/pets/kenguru.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'OWL',
+        location: 'Native to Europe',
+        image: '../../assets/pets/owl.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'PUMA',
+        location: 'Native to America',
+        image: '../../assets/pets/puma.jpg',
+        meal: "../../assets/pets/predator.png"},
+    {name: 'ZUBR',
+        location: 'Native to Eastern Europe',
+        image: '../../assets/pets/zubr.jpg',
+        meal: "../../assets/pets/herbivore.png"},
+    {name: 'WOLF',
+        location: 'Native to Europe',
+        image: '../../assets/pets/wolf.jpg',
+        meal: "../../assets/pets/predator.png"}
+]
 const burger = document.querySelector('.burger-list')
 const btn_move_right = document.querySelector('#move-right')
 const btn_move_left = document.querySelector('#move-left')
@@ -5,12 +67,15 @@ const carousel = document.querySelector('#carousel')
 const activeSlide = document.querySelector('#item-active')
 const leftSlide = document.querySelector('#item-left')
 const rightSlide = document.querySelector('#item-right')
+const overlay = document.querySelector('.burger-overlay')
 
-import animals from "./animals.js";
 
 document.body.addEventListener('click', (e) => {
     console.log(e.target)
-    if (e.target.classList.contains('burger-close')) {
+    if (e.target.classList.contains('burger-close') ||
+        e.target.classList.contains('burger-menu') ||
+        e.target.parentElement.classList.contains('burger-menu')
+    ) {
         burger.classList.toggle('burger-open')
         overlayToggle()
     } else if (e.target.classList.contains('burger-item') || e.target.parentElement.classList.contains('burger-item')
@@ -21,10 +86,11 @@ document.body.addEventListener('click', (e) => {
 })
 
 function overlayToggle() {
+    console.log(burger)
     if (burger.classList.contains('burger-open')) {
-        document.querySelector('.burger-overlay').style.opacity = '0.5'
+        overlay.classList.add('overlay-open')
     } else {
-        document.querySelector('.burger-overlay').style.opacity = '0'
+        overlay.classList.remove('overlay-open')
     }
 }
 
@@ -43,7 +109,6 @@ function moveRight(e) {
     btn_move_right.removeEventListener('click', moveRight)
 }
 function moveLeft(e) {
-    console.log(e.target)
     carousel.classList.add('transition-left')
     btn_move_left.removeEventListener('click', moveLeft)
 }
@@ -93,3 +158,54 @@ function createPetsNumber(count){
     }
     return arr
 }
+
+// testimonials________________________________________________________________
+//_____________________________________________________________________________
+
+
+
+const testimonialsSlider = document.querySelector('.testimonials__wrapper__cards')
+document.querySelector('#position_new_post').addEventListener('input',function (){
+    testimonialsSlider.style.marginLeft=(
+        -(document.querySelector('.testimonials__wrapper__cards>img').getBoundingClientRect().width+30)
+        *this.value)+'px'
+})
+
+const posts = document.querySelectorAll('.wrapper__post.mobile')
+const modal = document.querySelector('.modal-window')
+
+console.log(posts)
+
+posts.forEach(el=>{
+    el.addEventListener('click',()=>{
+        console.log(el.previousElementSibling)
+        let ap=`
+         <div class="modal-window-close"><img class="modal-window-close" src="../../assets/x_icon-2.png" alt="#"></div>
+            ${el.innerHTML}
+            `
+           modal.insertAdjacentHTML('beforeend', ap)
+        modal.style.opacity = '1'
+        overlay.classList.add('overlay-open')
+    })
+})
+
+document.addEventListener('click',e=>{
+if( e.target.classList.contains('modal-window-close') ||
+    e.target.classList.contains('burger-overlay')){
+    overlay.classList.remove('overlay-open')
+
+modal.textContent=''
+    modal.style.opacity = '0'
+} if(
+    e.target.classList.contains('burger-menu') ||
+    e.target.parentElement.classList.contains('burger-menu')){
+        modal.textContent=''
+    modal.style.opacity = '0'
+}
+})
+
+
+// donate________________________________________________________________
+//_____________________________________________________________________________
+
+
