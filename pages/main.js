@@ -165,10 +165,13 @@ function createPetsNumber(count){
 
 
 const testimonialsSlider = document.querySelector('.testimonials__wrapper__cards')
-document.querySelector('#position_new_post').addEventListener('input',function (){
-    testimonialsSlider.style.marginLeft=(
-        -(document.querySelector('.testimonials__wrapper__cards>img').getBoundingClientRect().width+30)
-        *this.value)+'px'
+document.querySelectorAll('.position_new_post').forEach(el=> {
+
+    el.addEventListener('input', function () {
+        testimonialsSlider.style.marginLeft = (
+            -(document.querySelector('.testimonials__wrapper__cards>img').getBoundingClientRect().width + 30)
+            * this.value) + 'px'
+    })
 })
 
 const posts = document.querySelectorAll('.wrapper__post.mobile')

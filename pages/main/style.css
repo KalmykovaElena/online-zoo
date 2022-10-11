@@ -1270,6 +1270,9 @@
 .testimonials__wrapper-progress {
   text-align: center;
 }
+.testimonials__wrapper-progress-input-min {
+  display: none;
+}
 .testimonials__wrapper-button {
   margin-top: 10px;
   border: none;
@@ -1427,6 +1430,12 @@ input[type=range]::-webkit-slider-thumb {
   .testimonials__wrapper-progress input[type=range] {
     width: 390px;
     height: 8px;
+  }
+  .testimonials__wrapper-progress-input-max {
+    display: none;
+  }
+  .testimonials__wrapper-progress-input-min {
+    display: inline-block;
   }
 }
 @media screen and (max-width: 1250px) {
