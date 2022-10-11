@@ -49,6 +49,7 @@
   color: #F9804B;
 }
 .header .burger-menu {
+  opacity: 0;
   width: 18px;
   height: 10px;
   display: flex;
@@ -92,6 +93,7 @@
     display: none;
   }
   .header .burger-menu {
+    opacity: 1;
     display: flex;
     position: relative;
     top: 11px;
@@ -782,7 +784,7 @@
 }
 @media screen and (max-width: 990px) {
   .mainContent-button {
-    margin: -47px auto 0;
+    margin: -168px auto 0;
   }
 }
 @media screen and (max-width: 639px) {
@@ -1253,6 +1255,7 @@
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  transition: 0.7s;
 }
 .testimonials__wrapper__cards .wrapper__post {
   width: 600px;
@@ -1718,20 +1721,33 @@ input {
     right: 150px;
     white-space: nowrap;
   }
+}
+@media screen and (max-width: 1220px) and (max-width: 639px) {
+  .footer__subscription > div:first-child {
+    right: -53vw;
+  }
+}
+@media screen and (max-width: 1220px) {
   .footer__subscription-form {
     position: absolute;
     top: 41px;
     right: 3.1vw;
   }
+}
+@media screen and (max-width: 1220px) {
   .footer__subscription-information {
     height: 312px;
   }
+}
+@media screen and (max-width: 1220px) {
   .footer__links-links {
     margin: 0;
   }
   .footer__links-button {
     margin-top: 23px;
   }
+}
+@media screen and (max-width: 1220px) {
   .footer__navigation {
     bottom: 0;
   }
@@ -2015,13 +2031,19 @@ input {
 .chooseSize ul li:after {
   content: "";
   border-bottom: 1px solid #ccc;
-  width: 88%;
+  width: 54vw;
   height: 1px;
   position: absolute;
   top: 50%;
-  left: 56px;
+  left: 2.5vw;
   transform: translate(0, -100%);
   z-index: 2;
+}
+@media screen and (max-width: 1599px) {
+  .chooseSize ul li:after {
+    width: 72vw;
+    left: 3.5vw;
+  }
 }
 
 .chooseSize ul li:last-child:after {

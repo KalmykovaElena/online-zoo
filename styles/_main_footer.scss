@@ -213,7 +213,10 @@ position: relative;
     position: relative;
     top:0;
     right:150px;
-    white-space: nowrap
+    white-space: nowrap;
+    @media screen and (max-width: 639px){
+      right:-53vw;
+    }
   }
 }
      &-form {

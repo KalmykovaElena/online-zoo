@@ -173,13 +173,17 @@ margin-bottom: 92px;
   &:after {
     content: '';
     border-bottom: 1px solid #ccc;
-    width: 88%;
+    width: 54vw;
     height: 1px;
     position: absolute;
     top: 50%;
-    left: 56px;
+    left: 2.5vw;
     transform: translate(0, -100%);
     z-index: 2;
+    @media screen and(max-width: 1599px) {
+      width: 72vw;
+      left: 3.5vw;
+    }
   }
 }
 .chooseSize ul li:last-child:after{
